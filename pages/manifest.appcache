@@ -32,7 +32,7 @@
     <!-- Use title if it's in the page YAML frontmatter -->
     <title>SQL Joins</title>
     <link href="/stylesheets/application-fe403d5e.css" rel="stylesheet" type="text/css" />
-    <script src="/javascripts/application-6be648c1.js" type="text/javascript" async="async"></script>
+    <script src="/javascripts/application-c691a2b9.js" type="text/javascript" async="async"></script>
 
     <!-- Go to www.addthis.com/dashboard to customize your tools -->
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-527012705413f0b7" async></script>
@@ -71,7 +71,7 @@
 
 CACHE:
 /stylesheets/application-fe403d5e.css
-/javascripts/application-6be648c1.js
+/javascripts/application-c691a2b9.js
 /images/postgres-6c9fb030.png
 /images/calc-bg-661aa7f4.png
 /images/main-bg-1255d77e.png
