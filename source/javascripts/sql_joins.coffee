@@ -95,4 +95,4 @@ OR B.key IS NULL"""
 
 
 
-$ -> window.a = new SqlJoins('#sqlJoinControl', $('#sqlJoinsInformation')) if $('#sqlJoinControl').length and $('#sqlJoinsInformation').length
+$ -> new SqlJoins('#sqlJoinControl', $('#sqlJoinsInformation')) if $('#sqlJoinControl').length and $('#sqlJoinsInformation').length
