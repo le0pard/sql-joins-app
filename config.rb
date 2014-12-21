@@ -44,10 +44,10 @@ page "/manifest.appcache", proxy: "/pages/manifest.appcache", layout: false
 ###
 helpers do
   def default_keywords_helper
-    "pgtune, postgresql, postgres, tuning, config, configuration, free, open source"
+    "sql, joins, mysql, postgresql, oracle, ms-sql, sqlite, open source"
   end
   def default_description_helper
-    "PgTune - Tuning PostgreSQL config by your hardware"
+    "Pocket SQL Joins visualizer"
   end
 end
 
