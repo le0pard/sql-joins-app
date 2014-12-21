@@ -123,7 +123,6 @@ GEM
       rack (>= 1.0)
     rails-assets-fastclick (1.0.3)
     rails-assets-jquery (2.1.3)
-    rails-assets-snap.svg (0.3.0)
     railties (4.1.8)
       actionpack (= 4.1.8)
       activesupport (= 4.1.8)
@@ -180,7 +179,6 @@ DEPENDENCIES
   oj
   rails-assets-fastclick (= 1.0.3)
   rails-assets-jquery (= 2.1.3)
-  rails-assets-snap.svg (= 0.3.0)
   redcarpet
   sass (>= 3.3.0)
   therubyracer
