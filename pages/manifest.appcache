@@ -39,8 +39,8 @@
     <script type="text/javascript">
       window.addthis_config = { data_track_addressbar: true }
       window.addthis_share = {
-        title: "PgTune",
-        description: "Tuning PostgreSQL config by your hardware",
+        title: "SQL Joins",
+        description: "Visual SQL Joins app",
         templates: {
           twitter: 'check out {{title}} on {{url}} (via @leopard_me)'
         }
