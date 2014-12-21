@@ -8,8 +8,8 @@
     <!-- Always force latest IE rendering engine or request Chrome Frame -->
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
     <!-- tags -->
-    <meta name="keywords" content="pgtune, postgresql, postgres, tuning, config, configuration, free, open source" />
-    <meta name="description" content="PgTune - Tuning PostgreSQL config by your hardware" />
+    <meta name="keywords" content="sql, joins, mysql, postgresql, oracle, ms-sql, sqlite, open source" />
+    <meta name="description" content="Pocket SQL Joins visualizer" />
     <link type="text/plain" rel="author" href="/humans.txt" />
     <!-- Set the viewport width to device width for mobile -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, maximum-scale=1.0" />
@@ -30,7 +30,7 @@
     <link rel="icon" type="image/ico" href="/images/favicons/favicon.ico" />
 
     <!-- Use title if it's in the page YAML frontmatter -->
-    <title>SQL Joins</title>
+    <title>Pocket SQL Joins visualizer</title>
     <link href="/stylesheets/application-3d860249.css" rel="stylesheet" type="text/css" />
     <script src="/javascripts/application-a693886b.js" type="text/javascript" async="async"></script>
 
