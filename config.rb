@@ -47,7 +47,7 @@ helpers do
     "sql, joins, mysql, postgresql, oracle, ms-sql, sqlite, open source"
   end
   def default_description_helper
-    "Pocket SQL Joins visualizer"
+    "SQL Joins visualizer"
   end
 end
 
