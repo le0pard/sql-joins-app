@@ -4,7 +4,14 @@ title: SQL Joins visualizer
 <div class="wrapper">
 
   <div class="row">
-    <div class="small-12 medium-12 large-6 large-centered small-centered columns">
+    <div class="small-12 medium-6 large-6 large-centered small-centered columns">
+      <h1>SQL Joins</h1>
+    </div>
+  </div>
+
+  <div class="row">
+
+    <div class="small-12 medium-6 large-6 columns">
       <div id="sqlJoinControl">
 
         <svg
@@ -90,19 +97,31 @@ title: SQL Joins visualizer
 
       </div>
     </div>
+
+
+    <div id="sqlJoinsInformation" class="small-12 medium-6 large-6 columns">
+
+      <div class="row">
+        <div class="small-12 medium-12 large-12 columns">
+          <div class="sql_description">Please select how do you want to do SQL JOIN between two table</div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="small-12 medium-12 large-12 columns">
+          <pre><code class="sql_info language-sql"></code></pre>
+        </div>
+        <div class="large-12 columns show-for-large-up">
+          <a href="#">Copy</a>
+        </div>
+      </div>
+
+    </div>
+
+
   </div>
 
-  <div id="sqlJoinsInformation" class="row">
-    <div class="small-12 medium-6 large-5 columns">
-      <div class="sql_description">Please select how do you want to do SQL JOIN between two table</div>
-    </div>
-    <div class="small-12 medium-6 large-5 columns">
-      <pre><code class="sql_info language-sql"></code></pre>
-    </div>
-    <div class="large-2 columns show-for-large-up">
-      <a href="#">Copy</a>
-    </div>
-  </div>
+
 
 </div> <!-- wrapper -->
 
