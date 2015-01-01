@@ -63,12 +63,14 @@ OR B.key IS NULL"""
   _initSvgControl: =>
     @leftCircle = Snap.select("#leftCircle")
     @leftCircle.click (h) => @_selectCircle(@leftCircle, 0)
+    Snap.select("#leftCircleText").click (h) => @_selectCircle(@leftCircle, 0)
 
     @intersectOfCircle = Snap.select("#intersectOfCircle")
     @intersectOfCircle.click (h) => @_selectCircle(@intersectOfCircle, 1)
 
     @rightCircle = Snap.select("#rightCircle")
     @rightCircle.click (h) => @_selectCircle(@rightCircle, 2)
+    Snap.select("#rightCircleText").click (h) => @_selectCircle(@leftCircle, 2)
 
   _selectCircle: (selectObj, selectObjPosition = 0) =>
     # selected circle
