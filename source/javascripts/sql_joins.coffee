@@ -1,5 +1,5 @@
 class SqlJoins
-  constructor: (@sqlControlID, @sqlDetails) ->
+  constructor: (@sqlDetails) ->
     @_sqlJoinsData =
       "0.0.0":
         sql: ''
@@ -49,10 +49,10 @@ A.key = B.key WHERE A.key IS NULL
 OR B.key IS NULL"""
         description: "To produce the set of records unique to Table A and Table B, we perform the full outer join, then exclude the records we don't want from both sides via a where clause"
 
-    # appcache
-    @_initAppcache()
     # init control
     @_initSvgControl()
+    # appcache
+    @_initAppcache()
     # init foundation
     try
       $(document).foundation()
@@ -61,15 +61,52 @@ OR B.key IS NULL"""
 
 
   _initSvgControl: =>
-    @sqlControl = Snap(@sqlControlID)
-    Snap.load "/images/sql_joins.svg", (sqlIcon) =>
-      sqlIcon.select("#upper-head").click =>
-        console.log '213123123'
+    @leftCircle = Snap.select("#leftCircle")
+    @leftCircle.click (h) => @_selectCircle(@leftCircle, 0)
 
-      @sqlControl.append(sqlIcon)
+    @intersectOfCircle = Snap.select("#intersectOfCircle")
+    @intersectOfCircle.click (h) => @_selectCircle(@intersectOfCircle, 1)
+
+    @rightCircle = Snap.select("#rightCircle")
+    @rightCircle.click (h) => @_selectCircle(@rightCircle, 2)
+
+  _selectCircle: (selectObj, selectObjPosition = 0) =>
+    # selected circle
+    isSelectedCircle = @_isSelectedCircle(selectObj)
+    # animate
+    states = if isSelectedCircle
+      [
+        {fill: 'rgb(255, 51, 51)'},
+        {fill: 'rgb(255, 102, 102)'},
+        {fill: 'rgb(255, 153, 153)'},
+        {fill: 'rgb(255, 204, 204)'},
+        {fill: 'rgb(255, 255, 255)'}
+      ]
+    else
+      [
+        {fill: 'rgb(255, 204, 204)'},
+        {fill: 'rgb(255, 153, 153)'},
+        {fill: 'rgb(255, 102, 102)'},
+        {fill: 'rgb(255, 51, 51)'},
+        {fill: 'rgb(255, 0, 0)'}
+      ]
+    (animateCircle = (states, i) =>
+      selectObj.animate states[i], 50, =>
+        i = i + 1
+        animateCircle(states, i) if states.length >= i
+    )(states, 0)
+    # select data
+    sqlState = for obj, i in [@leftCircle, @intersectOfCircle, @rightCircle]
+      if selectObjPosition is i
+        if !isSelectedCircle then '1' else '0'
+      else
+        if @_isSelectedCircle(obj) then '1' else '0'
+    @_selectJoinInfo(sqlState.join('.'))
+
+  _isSelectedCircle: (selectObj) => selectObj.attr('fill') is 'rgb(255, 0, 0)'
 
   _selectJoinInfo: (state) =>
-    sqlJoinInfo = @_findJoinData(state)
+    sqlJoinInfo = @_sqlJoinsData[state]
     return unless sqlJoinInfo?
 
     @sqlDetails.find('.sql_description').text(sqlJoinInfo.description)
@@ -82,8 +119,6 @@ OR B.key IS NULL"""
       $(e).removeClass('hljs')
       hljs.highlightBlock(e)
 
-  _findJoinData: (state) => @_sqlJoinsData[state]
-
   # appcache
   _initAppcache: =>
     return unless Modernizr.applicationcache is true
@@ -95,4 +130,4 @@ OR B.key IS NULL"""
 
 
 
-$ -> new SqlJoins('#sqlJoinControl', $('#sqlJoinsInformation')) if $('#sqlJoinControl').length and $('#sqlJoinsInformation').length
+$ -> new SqlJoins($('#sqlJoinsInformation')) if $('#sqlJoinsInformation').length
