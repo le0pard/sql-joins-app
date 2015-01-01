@@ -31,7 +31,7 @@
 
     <!-- Use title if it's in the page YAML frontmatter -->
     <title>SQL Joins visualizer</title>
-    <link href="/stylesheets/application-d1a63004.css" rel="stylesheet" type="text/css" />
+    <link href="/stylesheets/application-bff1d18d.css" rel="stylesheet" type="text/css" />
     <script src="/javascripts/application-82aae624.js" type="text/javascript" async="async"></script>
 
     <!-- Go to www.addthis.com/dashboard to customize your tools -->
@@ -70,7 +70,7 @@
 # version v1
 
 CACHE:
-/stylesheets/application-d1a63004.css
+/stylesheets/application-bff1d18d.css
 /javascripts/application-82aae624.js
 /images/postgres-6c9fb030.png
 /images/calc-bg-661aa7f4.png
