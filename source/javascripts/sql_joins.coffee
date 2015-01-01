@@ -70,7 +70,7 @@ OR B.key IS NULL"""
 
     @rightCircle = Snap.select("#rightCircle")
     @rightCircle.click (h) => @_selectCircle(@rightCircle, 2)
-    Snap.select("#rightCircleText").click (h) => @_selectCircle(@leftCircle, 2)
+    Snap.select("#rightCircleText").click (h) => @_selectCircle(@rightCircle, 2)
 
   _selectCircle: (selectObj, selectObjPosition = 0) =>
     # selected circle
