@@ -112,7 +112,7 @@ OR B.key IS NULL"""
         if @_isSelectedCircle(obj) then '1' else '0'
     @_selectJoinInfo(sqlState.join('.'))
 
-  _isSelectedCircle: (selectObj) => selectObj.attr('fill') is 'rgb(194, 88, 39)'
+  _isSelectedCircle: (selectObj) => Snap.getRGB(selectObj.attr('fill')).toString() is Snap.getRGB('rgb(194, 88, 39)').toString()
 
   _selectJoinInfo: (state) =>
     sqlJoinInfo = @_sqlJoinsData[state]
