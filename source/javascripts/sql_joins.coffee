@@ -138,7 +138,7 @@ OR B.key IS NULL"""
   # copy button
   _copyButtonInit: =>
     ZeroClipboard.config
-      swfPath: "/images/ZeroClipboard.swf"
+      swfPath: @sqlDetails.data('copy-swf')
 
     client = new ZeroClipboard(@copyButton)
     client.on 'ready', (readyEvent) =>
