@@ -66,8 +66,8 @@ $xxlarge-only: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)}) and (m
 
 
 // We use these to style anchors
-$anchor-text-decoration: underline;
-$anchor-font-color: #e37f09;
+$anchor-text-decoration: none;
+$anchor-font-color: #3a3a3a;
 // $anchor-font-color-hover: #f8ba73;
 
 // We use these to style the labels in different ways

@@ -1,123 +1,146 @@
 ---
-title: SQL Joins visualizer
+title: SQL Joins Visualizer
 ---
 
 <a class="show-for-large-up" href="https://github.com/le0pard/sql-joins-app"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/52760788cde945287fbb584134c4cbc2bc36f904/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f77686974655f6666666666662e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png"></a>
 
 <div class="wrapper">
 
-  <div class="row">
-    <div class="small-12 medium-6 large-6 large-centered small-centered columns">
-      <h1>SQL Joins</h1>
+  <div class="hero-block">
+    <div class="row">
+      <div class="small-12 large-10 large-offset-1 columns">
+        <div class="row">
+          <div class="large-10 large-centered columns">
+            <h1 class="hero-title">SQL Joins Visualizer</h1>
+          </div>
+        </div>
+
+        <div class="row show-for-medium-up">
+          <div class="large-12 large-centered columns">
+            <p class="hero-text">SQL Joins Visualizer help to you build SQL JOIN between two tables by using of <a href="//en.wikipedia.org/wiki/Venn_diagram" target="_blank">Venn diagrams</a>.</p>
+            <p class="hero-text hero-last-block">Working offline and as mobile app.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
-  <div class="row">
+  <div id="sqlJoinsInformation" class="visualizer-block" data-copy-swf="<%= asset_path :images, "ZeroClipboard.swf" %>">
+    <div class="visualizer-block-child">
 
-    <div class="small-12 medium-6 large-6 columns">
-      <div id="sqlJoinControl">
+      <div class="row">
 
-        <svg
-           xmlns:dc="http://purl.org/dc/elements/1.1/"
-           xmlns:cc="http://web.resource.org/cc/"
-           xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-           xmlns:svg="http://www.w3.org/2000/svg"
-           xmlns="http://www.w3.org/2000/svg"
-           xmlns:sodipodi="http://inkscape.sourceforge.net/DTD/sodipodi-0.dtd"
-           xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-           width="307.28000pt"
-           height="223.89000pt"
-           id="sqlJoinControlSvg">
-          <defs
-             id="defs3" />
-          <sodipodi:namedview
-             inkscape:document-units="mm"
-             id="base"
-             pagecolor="#ffffff"
-             bordercolor="#666666"
-             borderopacity="1.0"
-             inkscape:pageopacity="0.0"
-             inkscape:pageshadow="2"
-             inkscape:zoom="0.66872763"
-             inkscape:cx="94.679408"
-             inkscape:cy="141.50708"
-             inkscape:current-layer="layer1"
-             inkscape:window-width="1024"
-             inkscape:window-height="742"
-             inkscape:window-x="-4"
-             inkscape:window-y="-4"
-             showborder="true"
-             borderlayer="top" />
-          <metadata
-             id="metadata4">
-            <rdf:RDF>
-              <cc:Work
-                 rdf:about="">
-                <dc:format>image/svg+xml</dc:format>
-                <dc:type
-                   rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-              </cc:Work>
-            </rdf:RDF>
-          </metadata>
-          <g
-             inkscape:label="mainLayer"
-             inkscape:groupmode="layer"
-             id="mainLayer">
-            <circle
-               sodipodi:ry="120.00000"
-               sodipodi:rx="120.00000"
-               sodipodi:cy="180.00000"
-               sodipodi:cx="180.00000"
-               cx="180.00000"
-               cy="180.00000"
-               r="120.00000"
-               id="leftCircle"
-               style="fill:#ffffff;fill-opacity:1.0000000;stroke:#000000;stroke-width:3.0000000;stroke-miterlimit:4.0000000;stroke-dasharray:none;stroke-opacity:1.0000000"
-               transform="matrix(0.842564,0.000000,0.000000,0.840731,-10.24387,-10.52388)" />
-            <circle
-               sodipodi:ry="120.00000"
-               sodipodi:rx="120.00000"
-               sodipodi:cy="180.00000"
-               sodipodi:cx="300.00000"
-               cx="300.00000"
-               cy="180.00000"
-               r="120.00000"
-               id="rightCircle"
-               style="fill:#ffffff;fill-opacity:1.0000000;stroke:#000000;stroke-width:3.0000000;stroke-miterlimit:4.0000000;stroke-dasharray:none;stroke-opacity:1.0000000"
-               transform="matrix(0.842564,0.000000,0.000000,0.840731,-10.24387,-10.52388)" />
-            <path
-               d="M 191.97147,53.436405 C 223.25430,71.458270 242.52530,104.76406 242.52530,140.80780 C 242.52530,176.85154 223.25430,210.15733 191.97147,228.17919 C 160.68865,210.15733 141.41763,176.85154 141.41763,140.80780 C 141.41763,104.76406 160.68865,71.458270 191.97147,53.436405"
-               id="intersectOfCircle"
-               style="fill:#ffffff;fill-opacity:1.0000000;stroke:#000000;stroke-width:3.0498838;stroke-miterlimit:4.0000000;stroke-dasharray:none;stroke-opacity:1.0000000" />
-            <text id="leftCircleText" x="103" y="150" fill="#000000" font-size="30">A</text>
-            <text id="rightCircleText" x="257" y="150" fill="#000000" font-size="30">B</text>
-          </g>
-        </svg>
+        <div class="small-12 medium-6 large-6 columns">
+
+          <div class="row">
+            <div class="svg-control small-12 medium-12 large-12 columns">
+
+              <svg
+                 xmlns:dc="http://purl.org/dc/elements/1.1/"
+                 xmlns:cc="http://web.resource.org/cc/"
+                 xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                 xmlns:svg="http://www.w3.org/2000/svg"
+                 xmlns="http://www.w3.org/2000/svg"
+                 xmlns:sodipodi="http://inkscape.sourceforge.net/DTD/sodipodi-0.dtd"
+                 xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+                 width="290.28000pt"
+                 height="223.89000pt"
+                 id="sqlJoinControlSvg">
+                <defs
+                   id="defs3" />
+                <sodipodi:namedview
+                   inkscape:document-units="mm"
+                   id="base"
+                   pagecolor="#ffffff"
+                   bordercolor="#666666"
+                   borderopacity="1.0"
+                   inkscape:pageopacity="0.0"
+                   inkscape:pageshadow="2"
+                   inkscape:zoom="0.66872763"
+                   inkscape:cx="94.679408"
+                   inkscape:cy="141.50708"
+                   inkscape:current-layer="layer1"
+                   inkscape:window-width="1024"
+                   inkscape:window-height="742"
+                   inkscape:window-x="-4"
+                   inkscape:window-y="-4"
+                   showborder="true"
+                   borderlayer="top" />
+                <metadata
+                   id="metadata4">
+                  <rdf:RDF>
+                    <cc:Work
+                       rdf:about="">
+                      <dc:format>image/svg+xml</dc:format>
+                      <dc:type
+                         rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+                    </cc:Work>
+                  </rdf:RDF>
+                </metadata>
+                <g
+                   inkscape:label="mainLayer"
+                   inkscape:groupmode="layer"
+                   id="mainLayer">
+                  <circle
+                     sodipodi:ry="120.00000"
+                     sodipodi:rx="120.00000"
+                     sodipodi:cy="180.00000"
+                     sodipodi:cx="180.00000"
+                     cx="180.00000"
+                     cy="180.00000"
+                     r="120.00000"
+                     id="leftCircle"
+                     style="fill:#3a3a3a;fill-opacity:1.0000000;stroke:#ffffff;stroke-width:3.0000000;stroke-miterlimit:4.0000000;stroke-dasharray:none;stroke-opacity:1.0000000"
+                     transform="matrix(0.842564,0.000000,0.000000,0.840731,-10.24387,-10.52388)" />
+                  <circle
+                     sodipodi:ry="120.00000"
+                     sodipodi:rx="120.00000"
+                     sodipodi:cy="180.00000"
+                     sodipodi:cx="300.00000"
+                     cx="300.00000"
+                     cy="180.00000"
+                     r="120.00000"
+                     id="rightCircle"
+                     style="fill:#3a3a3a;fill-opacity:1.0000000;stroke:#ffffff;stroke-width:3.0000000;stroke-miterlimit:4.0000000;stroke-dasharray:none;stroke-opacity:1.0000000"
+                     transform="matrix(0.842564,0.000000,0.000000,0.840731,-10.24387,-10.52388)" />
+                  <path
+                     d="M 191.97147,53.436405 C 223.25430,71.458270 242.52530,104.76406 242.52530,140.80780 C 242.52530,176.85154 223.25430,210.15733 191.97147,228.17919 C 160.68865,210.15733 141.41763,176.85154 141.41763,140.80780 C 141.41763,104.76406 160.68865,71.458270 191.97147,53.436405"
+                     id="intersectOfCircle"
+                     style="fill:#3a3a3a;fill-opacity:1.0000000;stroke:#ffffff;stroke-width:3.0498838;stroke-miterlimit:4.0000000;stroke-dasharray:none;stroke-opacity:1.0000000" />
+                  <text id="leftCircleText" x="103" y="150" fill="#ffffff" font-size="30" font-family="'Roboto Slab', serif">A</text>
+                  <text id="rightCircleText" x="257" y="150" fill="#ffffff" font-size="30" font-family="'Roboto Slab', serif">B</text>
+                </g>
+              </svg>
+            </div>
+          </div>
+
+
+          <div class="row">
+            <div class="small-12 medium-12 large-10 large-centered columns">
+              <p class="sql_description explain-text">Please select how do you want to do SQL JOIN between two table</p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="small-12 medium-6 large-6 columns">
+
+          <div class="sql-result-block row">
+            <div class="small-12 medium-12 large-12 columns">
+              <pre><code id="clipboardSqlCode" class="sql_info language-sql"></code></pre>
+            </div>
+            <div class="large-offset-8 large-4 medium-offset-8 medium-4 columns show-for-medium-up">
+              <div class="copy-button-block">
+                <button id="copyButton" data-clipboard-target="clipboardSqlCode" title="Click to copy sql">Copy SQL</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
 
       </div>
     </div>
-
-
-    <div id="sqlJoinsInformation" class="small-12 medium-6 large-6 columns" data-copy-swf="<%= asset_path :images, "ZeroClipboard.swf" %>">
-
-      <div class="row">
-        <div class="small-12 medium-12 large-12 columns">
-          <div class="sql_description">Please select how do you want to do SQL JOIN between two table</div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="small-12 medium-12 large-12 columns">
-          <pre><code id="clipboardSqlCode" class="sql_info language-sql"></code></pre>
-        </div>
-        <div class="large-12 columns show-for-large-up">
-          <button id="copyButton" data-clipboard-target="clipboardSqlCode" title="Click to copy sql">Copy SQL</button>
-        </div>
-      </div>
-
-    </div>
-
-
   </div>
 
 

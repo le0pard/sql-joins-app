@@ -61,6 +61,8 @@ OR B.key IS NULL"""
     @_initAppcache()
     # copy button
     @_copyButtonInit()
+    # init highlight
+    @_hightlightCode()
     # init foundation
     try
       $(document).foundation()
@@ -83,19 +85,19 @@ OR B.key IS NULL"""
     # animate
     states = if isSelectedCircle
       [
-        {fill: 'rgb(255, 51, 51)'},
-        {fill: 'rgb(255, 102, 102)'},
-        {fill: 'rgb(255, 153, 153)'},
-        {fill: 'rgb(255, 204, 204)'},
-        {fill: 'rgb(255, 255, 255)'}
+        {fill: 'rgb(167, 82, 43)'},
+        {fill: 'rgb(140, 76, 47)'},
+        {fill: 'rgb(113, 70, 51)'},
+        {fill: 'rgb(86, 54, 55)'},
+        {fill: 'rgb(58, 58, 58)'}
       ]
     else
       [
-        {fill: 'rgb(255, 204, 204)'},
-        {fill: 'rgb(255, 153, 153)'},
-        {fill: 'rgb(255, 102, 102)'},
-        {fill: 'rgb(255, 51, 51)'},
-        {fill: 'rgb(255, 0, 0)'}
+        {fill: 'rgb(86, 54, 55)'},
+        {fill: 'rgb(113, 70, 51)'},
+        {fill: 'rgb(140, 76, 47)'},
+        {fill: 'rgb(167, 82, 43)'},
+        {fill: 'rgb(194, 88, 39)'}
       ]
     (animateCircle = (states, i) =>
       selectObj.animate states[i], 50, =>
@@ -110,7 +112,7 @@ OR B.key IS NULL"""
         if @_isSelectedCircle(obj) then '1' else '0'
     @_selectJoinInfo(sqlState.join('.'))
 
-  _isSelectedCircle: (selectObj) => selectObj.attr('fill') is 'rgb(255, 0, 0)'
+  _isSelectedCircle: (selectObj) => selectObj.attr('fill') is 'rgb(194, 88, 39)'
 
   _selectJoinInfo: (state) =>
     sqlJoinInfo = @_sqlJoinsData[state]
