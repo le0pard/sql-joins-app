@@ -49,10 +49,18 @@ A.key = B.key WHERE A.key IS NULL
 OR B.key IS NULL"""
         description: "To produce the set of records unique to Table A and Table B, we perform the full outer join, then exclude the records we don't want from both sides via a where clause"
 
+    # controlls
+    @leftCircle = Snap.select("#leftCircle")
+    @intersectOfCircle = Snap.select("#intersectOfCircle")
+    @rightCircle = Snap.select("#rightCircle")
+
+    @copyButton = $('button#copyButton')
     # init control
     @_initSvgControl()
     # appcache
     @_initAppcache()
+    # copy button
+    @_copyButtonInit()
     # init foundation
     try
       $(document).foundation()
@@ -61,14 +69,11 @@ OR B.key IS NULL"""
 
 
   _initSvgControl: =>
-    @leftCircle = Snap.select("#leftCircle")
     @leftCircle.click (h) => @_selectCircle(@leftCircle, 0)
     Snap.select("#leftCircleText").click (h) => @_selectCircle(@leftCircle, 0)
 
-    @intersectOfCircle = Snap.select("#intersectOfCircle")
     @intersectOfCircle.click (h) => @_selectCircle(@intersectOfCircle, 1)
 
-    @rightCircle = Snap.select("#rightCircle")
     @rightCircle.click (h) => @_selectCircle(@rightCircle, 2)
     Snap.select("#rightCircleText").click (h) => @_selectCircle(@rightCircle, 2)
 
@@ -113,12 +118,13 @@ OR B.key IS NULL"""
 
     @sqlDetails.find('.sql_description').text(sqlJoinInfo.description)
 
-    sqlInfo = @sqlDetails.find('.sql_info')
-    sqlInfo.text(sqlJoinInfo.sql)
-    if sqlJoinInfo.sql.length
-      sqlInfo.show()
-    else
-      sqlInfo.hide()
+    @sqlDetails.find('.sql_info').text(sqlJoinInfo.sql)
+
+    #for obj in [@sqlDetails.find('.sql_info'), @copyButton]
+    #  if sqlJoinInfo.sql.length
+    #    obj.show()
+    #  else
+    #    obj.hide()
 
     @_hightlightCode()
 
@@ -127,6 +133,19 @@ OR B.key IS NULL"""
     @sqlDetails.find('.sql_info').each (i, e) ->
       $(e).removeClass('hljs')
       hljs.highlightBlock(e)
+
+
+  # copy button
+  _copyButtonInit: =>
+    ZeroClipboard.config
+      swfPath: "/images/ZeroClipboard.swf"
+
+    client = new ZeroClipboard(@copyButton)
+    client.on 'ready', (readyEvent) =>
+      client.on 'aftercopy', (event) =>
+        @copyButton.text('Copied!')
+        setTimeout((=> @copyButton.text('Copy SQL')), 1000)
+    client.on 'error', (event) => console.warn "Clipy error: #{event}"
 
   # appcache
   _initAppcache: =>
