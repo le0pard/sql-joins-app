@@ -30,9 +30,9 @@
     <link rel="icon" type="image/ico" href="/images/favicons/favicon.ico" />
 
     <!-- Use title if it's in the page YAML frontmatter -->
-    <title>SQL Joins visualizer</title>
-    <link href="/stylesheets/application-bff1d18d.css" rel="stylesheet" type="text/css" />
-    <script src="/javascripts/application-9ab255f6.js" type="text/javascript" async="async"></script>
+    <title>SQL Joins Visualizer</title>
+    <link href="/stylesheets/application-f3d13f01.css" rel="stylesheet" type="text/css" />
+    <script src="/javascripts/application-43868375.js" type="text/javascript" async="async"></script>
 
     <!-- Go to www.addthis.com/dashboard to customize your tools -->
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-527012705413f0b7" async></script>
@@ -67,15 +67,15 @@
       </div>
     <![endif]-->
     CACHE MANIFEST
-# version v1
+# version v1.1
 
 CACHE:
-/stylesheets/application-bff1d18d.css
-/javascripts/application-9ab255f6.js
+/stylesheets/application-f3d13f01.css
+/javascripts/application-43868375.js
 /images/ZeroClipboard.swf
-/images/postgres-6c9fb030.png
-/images/calc-bg-661aa7f4.png
-/images/main-bg-1255d77e.png
+/images/arrow-b40fb99a.png
+/images/def-bg-9bf6f00b.png
+/images/main-bg-334e2cb0.png
 /images/favicons/apple-touch-icon-152x152-precomposed.png
 /images/favicons/apple-touch-icon-144x144-precomposed.png
 /images/favicons/apple-touch-icon-114x114-precomposed.png
