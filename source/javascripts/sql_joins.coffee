@@ -121,12 +121,11 @@ OR B.key IS NULL"""
     @sqlDetails.find('.sql_description').text(sqlJoinInfo.description)
 
     @sqlDetails.find('.sql_info').text(sqlJoinInfo.sql)
-
-    #for obj in [@sqlDetails.find('.sql_info'), @copyButton]
-    #  if sqlJoinInfo.sql.length
-    #    obj.show()
-    #  else
-    #    obj.hide()
+    # copy button
+    if sqlJoinInfo.sql.length
+      @copyButton.removeClass('disabled')
+    else
+      @copyButton.addClass('disabled')
 
     @_hightlightCode()
 
@@ -145,8 +144,11 @@ OR B.key IS NULL"""
     client = new ZeroClipboard(@copyButton)
     client.on 'ready', (readyEvent) =>
       client.on 'aftercopy', (event) =>
-        @copyButton.text('Copied!')
-        setTimeout((=> @copyButton.text('Copy SQL')), 1000)
+        return if @copyButton.hasClass('disabled')
+        @copyButton.addClass('copied').text('Copied!')
+        setTimeout((=>
+          @copyButton.removeClass('copied').text('Copy SQL')
+        ), 1000)
     client.on 'error', (event) => console.warn "Clipy error: #{event}"
 
   # appcache

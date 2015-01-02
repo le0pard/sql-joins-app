@@ -34,7 +34,7 @@ code
   box-shadow:         0px 3px 1px 2px rgba(0, 0, 0, 0.5)
 
 .hero-title
-  padding-top: 30px
+  padding-top: 40px
   color: #FFF
   font-weight: bold
   font-size: 4rem
@@ -42,12 +42,17 @@ code
   font-family: 'Roboto Slab', serif
 
 .hero-text
+  margin-bottom: 0
   color: #F2D0C2
   text-align: center
   font-family: 'Roboto', sans-serif
+  font-size: 1.1rem
+  font-weight: 300
 
 .hero-last-block
+  padding-top: 0px
   padding-bottom: 20px
+  margin-bottom: 1.25rem
 
 .visualizer-block
   border-top: #5d5d5d 1px dashed
@@ -56,21 +61,24 @@ code
     margin-top: 55px
     padding-bottom: 20px
     .explain-text
+      padding-top: 20px
       color: #828282
       font-family: 'Roboto', sans-serif
       text-align: center
     .svg-control
       text-align: center
     .sql-result-block
-      padding-top: 50px
+      padding-top: 10px
       pre
-        height: 120px
+        height: 150px
         border: #5D5D5D 1px dashed
-        padding: 3px
+        padding: 5px
         code
-          font-size: 1.2rem
+          font-size: 1.1rem
           height: 100%
           border: #ACACAC 1px dashed
+          padding: 20px
+          line-height: 1.2
       .copy-button-block
         padding-top: 20px
         text-align: right
@@ -80,6 +88,13 @@ code
           text-align: center
           background: #4b382e
           border: #ff8e5a 1px dashed
+          &:focus
+            outline: 0
+        button.copied
+          background: #75432b
+        button.disabled
+          background: #3b3b3b
+          border: #575656 1px dashed
 
 
 // svg css
@@ -131,6 +146,7 @@ svg #mainLayer
 @media #{$small-only}
   .hero-title
     font-size: 2rem
+    padding-top: 0
 
 
 #_atssh
