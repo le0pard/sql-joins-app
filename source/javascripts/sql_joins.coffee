@@ -112,7 +112,14 @@ OR B.key IS NULL"""
     return unless sqlJoinInfo?
 
     @sqlDetails.find('.sql_description').text(sqlJoinInfo.description)
-    @sqlDetails.find('.sql_info').text(sqlJoinInfo.sql)
+
+    sqlInfo = @sqlDetails.find('.sql_info')
+    sqlInfo.text(sqlJoinInfo.sql)
+    if sqlJoinInfo.sql.length
+      sqlInfo.show()
+    else
+      sqlInfo.hide()
+
     @_hightlightCode()
 
   # highlight code
