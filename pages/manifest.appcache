@@ -31,8 +31,8 @@
 
     <!-- Use title if it's in the page YAML frontmatter -->
     <title>SQL Joins Visualizer</title>
-    <link href="/stylesheets/application-3dc0fdf7.css" rel="stylesheet" />
-    <script src="/javascripts/application-6643e7f5.js" async="async"></script>
+    <link href="/stylesheets/application-9065fa0a.css" rel="stylesheet" />
+    <script src="/javascripts/application-6446c369.js" async="async"></script>
 
     <!-- Go to www.addthis.com/dashboard to customize your tools -->
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-527012705413f0b7" async></script>
@@ -70,8 +70,8 @@
 # version v1.3
 
 CACHE:
-/stylesheets/application-3dc0fdf7.css
-/javascripts/application-6643e7f5.js
+/stylesheets/application-9065fa0a.css
+/javascripts/application-6446c369.js
 /images/ZeroClipboard.swf
 /images/arrow-b40fb99a.png
 /images/def-bg-9bf6f00b.png
