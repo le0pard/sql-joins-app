@@ -1,0 +1,242 @@
+(function() {
+  var SqlJoins,
+    bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
+
+  SqlJoins = (function() {
+    function SqlJoins(sqlDetails) {
+      var e, error;
+      this.sqlDetails = sqlDetails;
+      this._appCacheUpdated = bind(this._appCacheUpdated, this);
+      this._initAppcache = bind(this._initAppcache, this);
+      this._copyButtonInit = bind(this._copyButtonInit, this);
+      this._hightlightCode = bind(this._hightlightCode, this);
+      this._selectJoinInfo = bind(this._selectJoinInfo, this);
+      this._isSelectedCircle = bind(this._isSelectedCircle, this);
+      this._selectCircle = bind(this._selectCircle, this);
+      this._initSvgControl = bind(this._initSvgControl, this);
+      this._sqlJoinsData = {
+        "0.0.0": {
+          sql: '',
+          description: 'Please select how do you want to do SQL JOIN between two table'
+        },
+        "1.0.0": {
+          sql: "SELECT * FROM TableA A\nLEFT JOIN TableB B ON\nA.key = B.key WHERE B.key IS NULL",
+          description: "To produce the set of records only in Table A, but not in Table B, we perform the left (outer) join, then exclude the records we don't want from the right side via a where clause"
+        },
+        "1.1.0": {
+          sql: "SELECT * FROM TableA A\nLEFT JOIN TableB B ON\nA.key = B.key",
+          description: "Left (outer) join produces a complete set of records from Table A, with the matching records (where available) in Table B. If there is no match, the right side will contain null"
+        },
+        "1.1.1": {
+          sql: "SELECT * FROM TableA A\nFULL OUTER JOIN TableB B ON\nA.key = B.key",
+          description: "Full outer join produces the set of all records in Table A and Table B, with matching records from both sides where available. If there is no match, the missing side will contain null"
+        },
+        "0.1.0": {
+          sql: "SELECT * FROM TableA A\nINNER JOIN TableB B ON\nA.key = B.key",
+          description: "Inner join produces only the set of records that match in both Table A and Table B"
+        },
+        "0.1.1": {
+          sql: "SELECT * FROM TableA A\nRIGHT JOIN TableB B ON\nA.key = B.key",
+          description: "Right (outer) join produces a complete set of records from Table B, with the matching records (where available) in Table A. If there is no match, the left side will contain null"
+        },
+        "0.0.1": {
+          sql: "SELECT * FROM TableA A\nRIGHT JOIN TableB B ON\nA.key = B.key WHERE A.key IS NULL",
+          description: "To produce the set of records only in Table B, but not in Table A, we perform the right (outer) join, then exclude the records we don't want from the right side via a where clause"
+        },
+        "1.0.1": {
+          sql: "SELECT * FROM TableA A\nFULL OUTER JOIN TableB B ON\nA.key = B.key WHERE A.key IS NULL\nOR B.key IS NULL",
+          description: "To produce the set of records unique to Table A and Table B, we perform the full outer join, then exclude the records we don't want from both sides via a where clause"
+        }
+      };
+      this.leftCircle = Snap.select("#leftCircle");
+      this.intersectOfCircle = Snap.select("#intersectOfCircle");
+      this.rightCircle = Snap.select("#rightCircle");
+      this.copyButton = $('button#copyButton');
+      this._initSvgControl();
+      this._initAppcache();
+      this._copyButtonInit();
+      this._hightlightCode();
+      try {
+        $(document).foundation();
+      } catch (error) {
+        e = error;
+        if (console.warn != null) {
+          console.warn("Too old browser with error: " + e);
+        }
+      }
+    }
+
+    SqlJoins.prototype._initSvgControl = function() {
+      this.leftCircle.click((function(_this) {
+        return function(h) {
+          return _this._selectCircle(_this.leftCircle, 0);
+        };
+      })(this));
+      Snap.select("#leftCircleText").click((function(_this) {
+        return function(h) {
+          return _this._selectCircle(_this.leftCircle, 0);
+        };
+      })(this));
+      this.intersectOfCircle.click((function(_this) {
+        return function(h) {
+          return _this._selectCircle(_this.intersectOfCircle, 1);
+        };
+      })(this));
+      this.rightCircle.click((function(_this) {
+        return function(h) {
+          return _this._selectCircle(_this.rightCircle, 2);
+        };
+      })(this));
+      return Snap.select("#rightCircleText").click((function(_this) {
+        return function(h) {
+          return _this._selectCircle(_this.rightCircle, 2);
+        };
+      })(this));
+    };
+
+    SqlJoins.prototype._selectCircle = function(selectObj, selectObjPosition) {
+      var animateCircle, i, isSelectedCircle, obj, sqlState, states;
+      if (selectObjPosition == null) {
+        selectObjPosition = 0;
+      }
+      isSelectedCircle = this._isSelectedCircle(selectObj);
+      states = isSelectedCircle ? [
+        {
+          fill: 'rgb(167, 82, 43)'
+        }, {
+          fill: 'rgb(140, 76, 47)'
+        }, {
+          fill: 'rgb(113, 70, 51)'
+        }, {
+          fill: 'rgb(86, 54, 55)'
+        }, {
+          fill: 'rgb(58, 58, 58)'
+        }
+      ] : [
+        {
+          fill: 'rgb(86, 54, 55)'
+        }, {
+          fill: 'rgb(113, 70, 51)'
+        }, {
+          fill: 'rgb(140, 76, 47)'
+        }, {
+          fill: 'rgb(167, 82, 43)'
+        }, {
+          fill: 'rgb(194, 88, 39)'
+        }
+      ];
+      (animateCircle = (function(_this) {
+        return function(states, i) {
+          return selectObj.animate(states[i], 50, function() {
+            i = i + 1;
+            if (states.length >= i) {
+              return animateCircle(states, i);
+            }
+          });
+        };
+      })(this))(states, 0);
+      sqlState = (function() {
+        var j, len, ref, results;
+        ref = [this.leftCircle, this.intersectOfCircle, this.rightCircle];
+        results = [];
+        for (i = j = 0, len = ref.length; j < len; i = ++j) {
+          obj = ref[i];
+          if (selectObjPosition === i) {
+            if (!isSelectedCircle) {
+              results.push('1');
+            } else {
+              results.push('0');
+            }
+          } else {
+            if (this._isSelectedCircle(obj)) {
+              results.push('1');
+            } else {
+              results.push('0');
+            }
+          }
+        }
+        return results;
+      }).call(this);
+      return this._selectJoinInfo(sqlState.join('.'));
+    };
+
+    SqlJoins.prototype._isSelectedCircle = function(selectObj) {
+      return Snap.getRGB(selectObj.attr('fill')).hex === Snap.getRGB('rgb(194, 88, 39)').hex;
+    };
+
+    SqlJoins.prototype._selectJoinInfo = function(state) {
+      var sqlJoinInfo;
+      sqlJoinInfo = this._sqlJoinsData[state];
+      if (sqlJoinInfo == null) {
+        return;
+      }
+      this.sqlDetails.find('.sql_description').text(sqlJoinInfo.description);
+      this.sqlDetails.find('.sql_info').text(sqlJoinInfo.sql);
+      if (sqlJoinInfo.sql.length) {
+        this.copyButton.removeClass('disabled');
+      } else {
+        this.copyButton.addClass('disabled');
+      }
+      return this._hightlightCode();
+    };
+
+    SqlJoins.prototype._hightlightCode = function() {
+      return this.sqlDetails.find('.sql_info').each(function(i, e) {
+        $(e).removeClass('hljs');
+        return hljs.highlightBlock(e);
+      });
+    };
+
+    SqlJoins.prototype._copyButtonInit = function() {
+      var client;
+      ZeroClipboard.config({
+        swfPath: this.sqlDetails.data('copy-swf')
+      });
+      client = new ZeroClipboard(this.copyButton);
+      client.on('ready', (function(_this) {
+        return function(readyEvent) {
+          return client.on('aftercopy', function(event) {
+            if (_this.copyButton.hasClass('disabled')) {
+              return;
+            }
+            _this.copyButton.addClass('copied').text('Copied!');
+            return setTimeout((function() {
+              return _this.copyButton.removeClass('copied').text('Copy SQL');
+            }), 1000);
+          });
+        };
+      })(this));
+      return client.on('error', (function(_this) {
+        return function(event) {
+          return console.warn("Clipy error: " + event);
+        };
+      })(this));
+    };
+
+    SqlJoins.prototype._initAppcache = function() {
+      if (Modernizr.applicationcache !== true) {
+        return;
+      }
+      return window.applicationCache.addEventListener('updateready', this._appCacheUpdated, false);
+    };
+
+    SqlJoins.prototype._appCacheUpdated = function(e) {
+      if (window.applicationCache.status !== window.applicationCache.UPDATEREADY) {
+        return;
+      }
+      if (confirm('A new version of this app is available. Load it?')) {
+        return window.location.reload();
+      }
+    };
+
+    return SqlJoins;
+
+  })();
+
+  $(function() {
+    if ($('#sqlJoinsInformation').length) {
+      return new SqlJoins($('#sqlJoinsInformation'));
+    }
+  });
+
+}).call(this);
