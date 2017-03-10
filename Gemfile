@@ -9,12 +9,11 @@ gem 'middleman-deploy', '>= 2.0.0.pre.alpha' # Deploy site
 gem 'middleman-autoprefixer', '~> 2.7'
 # css
 gem 'sass', '>= 3.3.0'
-gem 'compass'
 # assets
 source 'https://rails-assets.org' do
   gem 'rails-assets-jquery', '3.1.1'
   gem 'rails-assets-fastclick', '1.0.6'
-  gem 'rails-assets-zeroclipboard', '2.2.0'
+  gem 'rails-assets-zeroclipboard', '2.3.0'
 end
 gem 'foundation-rails', '~> 5.5', require: false
 # UTILS
