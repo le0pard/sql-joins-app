@@ -4,7 +4,7 @@
 
   SqlJoins = (function() {
     function SqlJoins(sqlDetails) {
-      var e, error;
+      var e;
       this.sqlDetails = sqlDetails;
       this._appCacheUpdated = bind(this._appCacheUpdated, this);
       this._initAppcache = bind(this._initAppcache, this);
