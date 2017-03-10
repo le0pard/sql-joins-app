@@ -2,14 +2,12 @@
 Error: File to import not found or unreadable: foundation/functions.
         on line 13 of /Users/leo/programs/projects/sql-joins-app/source/stylesheets/_settings.scss
         from line 1 of /Users/leo/programs/projects/sql-joins-app/source/stylesheets/_foundation_with_settings.scss
-        from line 6 of /Users/leo/programs/projects/sql-joins-app/source/stylesheets/app.sass
-
-8: @import "sql_joins"
+        from line 3 of /Users/leo/programs/projects/sql-joins-app/source/stylesheets/app.sass
 
 Backtrace:
 /Users/leo/programs/projects/sql-joins-app/source/stylesheets/_settings.scss:13
 /Users/leo/programs/projects/sql-joins-app/source/stylesheets/_foundation_with_settings.scss:1
-/Users/leo/programs/projects/sql-joins-app/source/stylesheets/app.sass:6
+/Users/leo/programs/projects/sql-joins-app/source/stylesheets/app.sass:3
 /Users/leo/.rvm/gems/ruby-2.3.3/gems/sass-3.4.23/lib/sass/tree/import_node.rb:67:in `rescue in import'
 /Users/leo/.rvm/gems/ruby-2.3.3/gems/sass-3.4.23/lib/sass/tree/import_node.rb:45:in `import'
 /Users/leo/.rvm/gems/ruby-2.3.3/gems/sass-3.4.23/lib/sass/tree/import_node.rb:28:in `imported_file'
@@ -156,4 +154,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: File to import not found or unreadable: foundation/functions.\A         on line 13 of /Users/leo/programs/projects/sql-joins-app/source/stylesheets/_settings.scss\A         from line 1 of /Users/leo/programs/projects/sql-joins-app/source/stylesheets/_foundation_with_settings.scss\A         from line 6 of /Users/leo/programs/projects/sql-joins-app/source/stylesheets/app.sass\A \A 8: @import \"sql_joins\""; }
+  content: "Error: File to import not found or unreadable: foundation/functions.\A         on line 13 of /Users/leo/programs/projects/sql-joins-app/source/stylesheets/_settings.scss\A         from line 1 of /Users/leo/programs/projects/sql-joins-app/source/stylesheets/_foundation_with_settings.scss\A         from line 3 of /Users/leo/programs/projects/sql-joins-app/source/stylesheets/app.sass"; }
