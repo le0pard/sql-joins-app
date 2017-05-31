@@ -149,7 +149,7 @@ OR B.key IS NULL"""
         setTimeout((=>
           @copyButton.removeClass('copied').text('Copy SQL')
         ), 1000)
-    client.on 'error', (event) => console.warn "Clipy error: #{event}"
+    client.on 'error', (event) => console.warn "Clipy error", event
 
   # appcache
   _initAppcache: =>
