@@ -208,7 +208,7 @@
       })(this));
       return client.on('error', (function(_this) {
         return function(event) {
-          return console.warn("Clipy error: " + event);
+          return console.warn("Clipy error", event);
         };
       })(this));
     };
