@@ -172,7 +172,7 @@
       }
       this.sqlDetails.find('.sql_description').text(sqlJoinInfo.description);
       this.sqlDetails.find('.sql_info').text(sqlJoinInfo.sql);
-      this.copyButton.attr('data-clipboard-text', sqlJoinInfo.sql);
+      this.copyButton.attr('data-clipboard-text', sqlJoinInfo.sql.replace(/\n/gi, ' '));
       if (sqlJoinInfo.sql.length) {
         this.copyButton.removeClass('disabled');
       } else {
