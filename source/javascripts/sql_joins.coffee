@@ -121,7 +121,7 @@ OR B.key IS NULL"""
     @sqlDetails.find('.sql_description').text(sqlJoinInfo.description)
 
     @sqlDetails.find('.sql_info').text(sqlJoinInfo.sql)
-    @copyButton.attr('data-clipboard-text', sqlJoinInfo.sql)
+    @copyButton.attr('data-clipboard-text', sqlJoinInfo.sql.replace(/\n/gi, ' '))
     # copy button
     if sqlJoinInfo.sql.length
       @copyButton.removeClass('disabled')
