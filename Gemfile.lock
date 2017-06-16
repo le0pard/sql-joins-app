@@ -137,9 +137,9 @@ GEM
     rack (2.0.3)
     rack-test (0.6.3)
       rack (>= 1.0)
+    rails-assets-clipboard (1.7.1)
     rails-assets-fastclick (1.0.6)
     rails-assets-jquery (3.2.1)
-    rails-assets-zeroclipboard (2.3.0)
     rails-dom-testing (2.0.3)
       activesupport (>= 4.2.0)
       nokogiri (>= 1.6)
@@ -192,9 +192,9 @@ DEPENDENCIES
   nokogiri
   oily_png
   oj
+  rails-assets-clipboard (= 1.7.1)!
   rails-assets-fastclick (= 1.0.6)!
   rails-assets-jquery (= 3.2.1)!
-  rails-assets-zeroclipboard (= 2.3.0)!
   sass (>= 3.3.0)
   therubyracer
   tzinfo

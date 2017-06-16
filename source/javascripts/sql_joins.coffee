@@ -54,7 +54,7 @@ OR B.key IS NULL"""
     @intersectOfCircle = Snap.select("#intersectOfCircle")
     @rightCircle = Snap.select("#rightCircle")
 
-    @copyButton = $('button#copyButton')
+    @copyButton = $('.copy_button')
     # init control
     @_initSvgControl()
     # appcache
@@ -121,6 +121,7 @@ OR B.key IS NULL"""
     @sqlDetails.find('.sql_description').text(sqlJoinInfo.description)
 
     @sqlDetails.find('.sql_info').text(sqlJoinInfo.sql)
+    @copyButton.attr('data-clipboard-text', sqlJoinInfo.sql)
     # copy button
     if sqlJoinInfo.sql.length
       @copyButton.removeClass('disabled')
@@ -135,21 +136,16 @@ OR B.key IS NULL"""
       $(e).removeClass('hljs')
       hljs.highlightBlock(e)
 
-
   # copy button
   _copyButtonInit: =>
-    ZeroClipboard.config
-      swfPath: @sqlDetails.data('copy-swf')
-
-    client = new ZeroClipboard(@copyButton)
-    client.on 'ready', (readyEvent) =>
-      client.on 'aftercopy', (event) =>
-        return if @copyButton.hasClass('disabled')
-        @copyButton.addClass('copied').text('Copied!')
-        setTimeout((=>
-          @copyButton.removeClass('copied').text('Copy SQL')
-        ), 1000)
-    client.on 'error', (event) => console.warn "Clipy error", event
+    client = new Clipboard('.copy_button')
+    client.on 'success', (event) =>
+      return if @copyButton.hasClass('disabled')
+      @copyButton.addClass('copied').text('Copied!')
+      setTimeout((=>
+        @copyButton.removeClass('copied').text('Copy SQL')
+      ), 1000)
+    client.on 'error', (event) => console.warn "Copy error", event
 
   # appcache
   _initAppcache: =>
@@ -159,7 +155,6 @@ OR B.key IS NULL"""
   _appCacheUpdated: (e) =>
     return unless window.applicationCache.status is window.applicationCache.UPDATEREADY
     window.location.reload() if confirm('A new version of this app is available. Load it?')
-
 
 
 $ -> new SqlJoins($('#sqlJoinsInformation')) if $('#sqlJoinsInformation').length

@@ -13,7 +13,7 @@ gem 'sass', '>= 3.3.0'
 source 'https://rails-assets.org' do
   gem 'rails-assets-jquery', '3.2.1'
   gem 'rails-assets-fastclick', '1.0.6'
-  gem 'rails-assets-zeroclipboard', '2.3.0'
+  gem 'rails-assets-clipboard', '1.7.1'
 end
 gem 'foundation-rails', '~> 5.5', require: false
 # UTILS

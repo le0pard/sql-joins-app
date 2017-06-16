@@ -1,7 +1,7 @@
 //= require ./vendors/modernizr
 //= require jquery
 //= require fastclick
-//= require zeroclipboard
+//= require clipboard
 //= require ./vendors/snap.svg-min
 
 //= require foundation/foundation
