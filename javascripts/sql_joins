@@ -51,7 +51,7 @@
       this.leftCircle = Snap.select("#leftCircle");
       this.intersectOfCircle = Snap.select("#intersectOfCircle");
       this.rightCircle = Snap.select("#rightCircle");
-      this.copyButton = $('button#copyButton');
+      this.copyButton = $('.copy_button');
       this._initSvgControl();
       this._initAppcache();
       this._copyButtonInit();
@@ -172,6 +172,7 @@
       }
       this.sqlDetails.find('.sql_description').text(sqlJoinInfo.description);
       this.sqlDetails.find('.sql_info').text(sqlJoinInfo.sql);
+      this.copyButton.attr('data-clipboard-text', sqlJoinInfo.sql);
       if (sqlJoinInfo.sql.length) {
         this.copyButton.removeClass('disabled');
       } else {
@@ -189,26 +190,21 @@
 
     SqlJoins.prototype._copyButtonInit = function() {
       var client;
-      ZeroClipboard.config({
-        swfPath: this.sqlDetails.data('copy-swf')
-      });
-      client = new ZeroClipboard(this.copyButton);
-      client.on('ready', (function(_this) {
-        return function(readyEvent) {
-          return client.on('aftercopy', function(event) {
-            if (_this.copyButton.hasClass('disabled')) {
-              return;
-            }
-            _this.copyButton.addClass('copied').text('Copied!');
-            return setTimeout((function() {
-              return _this.copyButton.removeClass('copied').text('Copy SQL');
-            }), 1000);
-          });
+      client = new Clipboard('.copy_button');
+      client.on('success', (function(_this) {
+        return function(event) {
+          if (_this.copyButton.hasClass('disabled')) {
+            return;
+          }
+          _this.copyButton.addClass('copied').text('Copied!');
+          return setTimeout((function() {
+            return _this.copyButton.removeClass('copied').text('Copy SQL');
+          }), 1000);
         };
       })(this));
       return client.on('error', (function(_this) {
         return function(event) {
-          return console.warn("Clipy error", event);
+          return console.warn("Copy error", event);
         };
       })(this));
     };
