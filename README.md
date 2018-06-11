@@ -1,4 +1,4 @@
-# [SQL Joins Visualizer](http://sql-joins.leopard.in.ua/)
+# [SQL Joins Visualizer](https://sql-joins.leopard.in.ua/)
 
 SQL Joins Visualizer help to you build SQL JOIN between two tables by using of Venn diagrams.
 
