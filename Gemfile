@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'middleman', '>= 4.1.9'
+gem 'middleman', '~> 4.2.1'
 # EXTENSIONS
 gem 'middleman-sprockets', '>= 4.0.0'
 gem 'middleman-favicon-maker', '>= 4.0.3' # Generate favicon files in various sizes from a base image
@@ -18,7 +18,7 @@ end
 gem 'foundation-rails', '~> 5.5', require: false
 # UTILS
 gem 'oily_png'     # faster PNG
-gem 'therubyracer' # faster ExecJS
+gem 'mini_racer' # faster ExecJS
 gem 'oj'           # faster JSON
 gem 'kramdown', '>= 1.9.0'    # faster ExecJS
 gem 'builder'      # XML builder
