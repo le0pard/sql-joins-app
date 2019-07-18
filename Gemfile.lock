@@ -115,7 +115,7 @@ GEM
     middleman-sprockets (4.1.1)
       middleman-core (~> 4.0)
       sprockets (>= 3.0)
-    mini_magick (4.9.3)
+    mini_magick (4.9.4)
     mini_portile2 (2.4.0)
     mini_racer (0.2.4)
       libv8 (>= 6.3)
