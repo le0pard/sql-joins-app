@@ -190,7 +190,7 @@
 
     SqlJoins.prototype._copyButtonInit = function() {
       var client;
-      client = new Clipboard('.copy_button');
+      client = new ClipboardJS('.copy_button');
       client.on('success', (function(_this) {
         return function(event) {
           if (_this.copyButton.hasClass('disabled')) {
