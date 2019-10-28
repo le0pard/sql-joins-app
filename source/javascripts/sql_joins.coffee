@@ -138,7 +138,7 @@ OR B.key IS NULL"""
 
   # copy button
   _copyButtonInit: =>
-    client = new Clipboard('.copy_button')
+    client = new ClipboardJS('.copy_button')
     client.on 'success', (event) =>
       return if @copyButton.hasClass('disabled')
       @copyButton.addClass('copied').text('Copied!')

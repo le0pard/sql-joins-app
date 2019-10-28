@@ -8,12 +8,11 @@ gem 'middleman-minify-html', '>= 3.4.1' # min html
 gem 'middleman-deploy', '>= 2.0.0.pre.alpha' # Deploy site
 gem 'middleman-autoprefixer', '~> 2.7'
 # css
-gem 'sass', '>= 3.3.0'
+gem 'sassc'
 # assets
 source 'https://rails-assets.org' do
-  gem 'rails-assets-jquery', '3.3.1'
-  gem 'rails-assets-fastclick', '1.0.6'
-  gem 'rails-assets-clipboard', '1.7.1'
+  gem 'rails-assets-jquery', '3.4.1'
+  gem 'rails-assets-clipboard', '2.0.4'
 end
 gem 'foundation-rails', '~> 5.5', require: false
 # UTILS

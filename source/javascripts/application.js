@@ -1,6 +1,5 @@
 //= require ./vendors/modernizr
 //= require jquery
-//= require fastclick
 //= require clipboard
 //= require ./vendors/snap.svg-min
 
