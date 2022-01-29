@@ -5,6 +5,7 @@
   "bracketSpacing": false,
   "arrowParens": "always",
   "trailingComma": "none",
+  "bracketSameLine": true,
   "printWidth": 100,
   "svelteSortOrder": "options-scripts-styles-markup",
   "svelteStrictMode": true,
