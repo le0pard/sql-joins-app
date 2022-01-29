@@ -2,7 +2,6 @@
 
 SQL Joins Visualizer help to you build SQL JOIN between two tables by using of Venn diagrams.
 
-
 ## Development
 
 [Main logic](https://github.com/le0pard/sql-joins-app/blob/master/source/javascripts/sql_joins.coffee).

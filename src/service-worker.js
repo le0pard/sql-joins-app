@@ -1,3 +1,1 @@
-import { build, files, timestamp } from '$service-worker'
-
-
+import {build, files, timestamp} from '$service-worker'

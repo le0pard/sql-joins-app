@@ -1,25 +1,29 @@
+<svelte:options immutable="{true}" />
+
 <script>
-  import '../app.css'
+  import '@root/app.css'
 </script>
 
 <style lang="postcss">
-  .github-corner:hover .octo-arm {
-    animation: octocat-wave 560ms ease-in-out;
-  }
-
   @keyframes octocat-wave {
     0%,
     100% {
       transform: rotate(0);
     }
+
     20%,
     60% {
       transform: rotate(-25deg);
     }
+
     40%,
     80% {
       transform: rotate(10deg);
     }
+  }
+
+  .github-corner:hover .octo-arm {
+    animation: octocat-wave 560ms ease-in-out;
   }
 
   @media (max-width: 500px) {

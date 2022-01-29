@@ -24,7 +24,11 @@
     "prettier-plugin-svelte": "2.5.1",
     "rucksack-css": "^1.0.2",
     "svelte": "3.45.0",
-    "svelte-preprocess": "^4.10.1"
+    "svelte-preprocess": "^4.10.1",
+    "workbox-precaching": "^6.4.2",
+    "workbox-routing": "^6.4.2",
+    "workbox-strategies": "^6.4.2",
+    "workbox-window": "^6.4.2"
   },
   "type": "module"
 }
