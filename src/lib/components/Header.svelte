@@ -14,7 +14,8 @@
           <p class="hero-text">
             SQL Joins Visualizer help to you build SQL JOIN between two tables by using of <a
               href="//en.wikipedia.org/wiki/Venn_diagram"
-              target="_blank">Venn diagrams</a
+              target="_blank"
+              rel="noopener noreferrer">Venn diagrams</a
             >
           </p>
         </div>

@@ -24,19 +24,19 @@
                   fill="#3A3B3B"
                   d="M100.736,194.11c-52.499,0-95.21-42.394-95.21-94.5s42.711-94.5,95.21-94.5 c22.376,0,44.062,7.863,61.197,22.166c-19.975,18.744-31.408,45.041-31.408,72.334c0,27.293,11.433,53.59,31.408,72.334 C144.799,186.247,123.113,194.11,100.736,194.11"
                   id="leftCircle"
-                  style="fill:#3a3a3a;fill-opacity:1.0000000;stroke:#ffffff;stroke-width:2.0000000;stroke-miterlimit:4.0000000;stroke-dasharray:none;stroke-opacity:1.0000000"
+                  style="fill:#3a3a3a;fill-opacity:1;stroke:#ffffff;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
                 ></path>
                 <path
                   fill="#3A3B3B"
                   d="M165.735,168.593c-19.211-17.847-30.21-42.937-30.21-68.984c0-26.048,10.999-51.136,30.21-68.984 c19.21,17.848,30.208,42.937,30.208,68.984S184.946,150.745,165.735,168.593"
                   id="intersectOfCircle"
-                  style="fill:#3a3a3a;fill-opacity:1.0000000;stroke:#ffffff;stroke-width:2.0000000;stroke-miterlimit:4.0000000;stroke-dasharray:none;stroke-opacity:1.0000000"
+                  style="fill:#3a3a3a;fill-opacity:1;stroke:#ffffff;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
                 ></path>
                 <path
                   fill="#3A3B3B"
                   d="M230.735,194.11c-22.378,0-44.063-7.863-61.199-22.166c19.976-18.744,31.408-45.041,31.408-72.334 c0-27.293-11.433-53.59-31.408-72.334c17.136-14.303,38.821-22.166,61.199-22.166c52.498,0,95.208,42.393,95.208,94.5 S283.233,194.11,230.735,194.11"
                   id="rightCircle"
-                  style="fill:#3a3a3a;fill-opacity:1.0000000;stroke:#ffffff;stroke-width:2.0000000;stroke-miterlimit:4.0000000;stroke-dasharray:none;stroke-opacity:1.0000000"
+                  style="fill:#3a3a3a;fill-opacity:1;stroke:#ffffff;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
                 ></path>
                 <text
                   id="leftCircleText"
