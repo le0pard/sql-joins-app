@@ -26,14 +26,15 @@ jobs:
           path: ~/.pnpm-store
           key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
-            ${{ runner.os }}-
+            ${{ runner.os }}-pnpm-
 
-      - uses: pnpm/action-setup@v2.0.1
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2.0.1
         with:
           version: 6
           run_install: |
-          - recursive: true
-            args: [--frozen-lockfile, --strict-peer-dependencies]
+            - recursive: true
+              args: [--frozen-lockfile, --strict-peer-dependencies]
 
       - name: Run eslint linter
         run: pnpm run lint
