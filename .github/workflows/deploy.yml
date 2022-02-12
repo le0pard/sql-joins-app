@@ -17,17 +17,10 @@ jobs:
           persist-credentials: false
 
       - name: Install Node.JS
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v2
         with:
           node-version: '16.13.1'
-
-      - name: Cache pnpm modules
-        uses: actions/cache@v2
-        with:
-          path: ~/.pnpm-store
-          key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-
+          cache: 'pnpm'
 
       - name: Install pnpm
         uses: pnpm/action-setup@v2.0.1
@@ -44,7 +37,7 @@ jobs:
         run: pnpm run build
 
       # - name: Deploy 🚀
-      #   uses: JamesIves/github-pages-deploy-action@4.1.0
+      #   uses: JamesIves/github-pages-deploy-action@v4.2.3
       #   with:
       #     token: ${{ secrets.GITHUB_TOKEN }}
       #     branch: gh-pages # The branch the action should deploy to.
