@@ -4,10 +4,8 @@
   import {onMount} from 'svelte'
   import ClipboardJS from 'clipboard'
   import hljs from '@utils/highlight'
-  import {SQL_MAP} from '@utils/constants'
+  import {DEFAULT_VALUE, SQL_MAP} from '@utils/constants'
   import VennDiagram from './VennDiagram.svelte'
-
-  const DEFAULT_VALUE = '0.0.0'
 
   let copyButtonEl = null
   let isButtonClicked = false

@@ -3,6 +3,7 @@
 <script>
   import {SVG} from '@svgdotjs/svg.js'
   import {onMount} from 'svelte'
+  import {DEFAULT_VALUE} from '@utils/constants'
 
   export let handleClick = null
 
@@ -12,7 +13,7 @@
   let rightCircleEl = null
   let rightCircleTextEl = null
 
-  let sqlState = '0.0.0'
+  let sqlState = DEFAULT_VALUE
 
   const animatePath = (path, isSelected = false) => {
     const fillColor = (() => {

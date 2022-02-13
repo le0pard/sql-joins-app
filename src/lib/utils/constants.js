@@ -1,3 +1,5 @@
+export const DEFAULT_VALUE = '0.0.0'
+
 export const SQL_MAP = {
   '0.0.0': {
     sql: '',
