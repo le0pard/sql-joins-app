@@ -3,12 +3,9 @@
 <script>
   import {onMount} from 'svelte'
   import ClipboardJS from 'clipboard'
-  import hljs from 'highlight.js/lib/core'
-  import sqlLang from 'highlight.js/lib/languages/sql'
-  import VennDiagram from './VennDiagram.svelte'
+  import hljs from '@utils/highlight'
   import {SQL_MAP} from '@utils/constants'
-
-  hljs.registerLanguage('sql', sqlLang)
+  import VennDiagram from './VennDiagram.svelte'
 
   const DEFAULT_VALUE = '0.0.0'
 
@@ -18,7 +15,7 @@
   let descriptionText = SQL_MAP[DEFAULT_VALUE].description
   let sqlText = SQL_MAP[DEFAULT_VALUE].sql.trim()
   $: sqlExample = hljs.highlight(sqlText, {language: 'sql'}).value
-  $: isButtonEnabled = sqlText.length > 0
+  $: isButtonDisabled = sqlText.length === 0
 
   const handleClick = (state = DEFAULT_VALUE) => {
     let {sql, description} = SQL_MAP[state]
@@ -38,7 +35,7 @@
         clearTimeout(timer)
       }
 
-      if (!isButtonEnabled) {
+      if (isButtonDisabled) {
         return
       }
 
@@ -141,7 +138,7 @@
     <button
       bind:this="{copyButtonEl}"
       class="copy-button"
-      disabled="{!isButtonEnabled}"
+      disabled="{isButtonDisabled}"
       class:copy-button-copied="{isButtonClicked}"
       title="Click to copy sql">
       {isButtonClicked ? 'Copied!' : 'Copy SQL'}

@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-      - sveltekit
 
 jobs:
   build-and-deploy:
@@ -43,9 +42,9 @@ jobs:
       - name: Build website
         run: pnpm run build
 
-      # - name: Deploy 🚀
-      #   uses: JamesIves/github-pages-deploy-action@v4.2.3
-      #   with:
-      #     token: ${{ secrets.GITHUB_TOKEN }}
-      #     branch: gh-pages # The branch the action should deploy to.
-      #     folder: dist # The folder the action should deploy.
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4.2.3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: gh-pages # The branch the action should deploy to.
+          folder: build # The folder the action should deploy.
