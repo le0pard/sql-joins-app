@@ -4,7 +4,6 @@ specifiers:
   '@sveltejs/adapter-static': ^1.0.0-next.28
   '@sveltejs/kit': next
   '@svgdotjs/svg.js': ^3.1.2
-  autoprefixer: ^10.4.2
   clipboard: 2.0.10
   eslint: 8.9.0
   eslint-config-prettier: ^8.3.0
@@ -20,16 +19,11 @@ specifiers:
   prettier-plugin-svelte: 2.6.0
   svelte: 3.46.4
   svelte-preprocess: 4.10.3
-  workbox-precaching: ^6.4.2
-  workbox-routing: ^6.4.2
-  workbox-strategies: ^6.4.2
-  workbox-window: ^6.4.2
 
 devDependencies:
   '@sveltejs/adapter-static': 1.0.0-next.28
   '@sveltejs/kit': 1.0.0-next.267_svelte@3.46.4
   '@svgdotjs/svg.js': 3.1.2
-  autoprefixer: 10.4.2_postcss@8.4.6
   clipboard: 2.0.10
   eslint: 8.9.0
   eslint-config-prettier: 8.3.0_eslint@8.9.0
@@ -45,10 +39,6 @@ devDependencies:
   prettier-plugin-svelte: 2.6.0_prettier@2.5.1+svelte@3.46.4
   svelte: 3.46.4
   svelte-preprocess: 4.10.3_06670835898ebc1da7d1c97a8716c619
-  workbox-precaching: 6.4.2
-  workbox-routing: 6.4.2
-  workbox-strategies: 6.4.2
-  workbox-window: 6.4.2
 
 packages:
 
@@ -205,10 +195,6 @@ packages:
     resolution: {integrity: sha512-BPdoIt1lfJ6B7rw35ncdwBZrAssjcwzI5LByIrYs+tpXlj/CAkuVdRsgZDdP4lq5EjyWzwxZCqAoFyHKFwp32g==}
     dependencies:
       '@types/node': 17.0.17
-    dev: true
-
-  /@types/trusted-types/2.0.2:
-    resolution: {integrity: sha512-F5DIZ36YVLE+PN+Zwws4kJogq47hNgX3Nx6WyDJ3kcplxyke3XIzB8uK5n/Lpm1HBsbGzd6nmGehL8cPekP+Tg==}
     dev: true
 
   /acorn-jsx/5.3.2_acorn@8.7.0:
@@ -1748,37 +1734,6 @@ packages:
   /word-wrap/1.2.3:
     resolution: {integrity: sha512-Hz/mrNwitNRh/HUAtM/VT/5VH+ygD6DV7mYKZAtHOrbs8U7lvPS6xf7EJKMF0uW1KJCl0H701g3ZGus+muE5vQ==}
     engines: {node: '>=0.10.0'}
-    dev: true
-
-  /workbox-core/6.4.2:
-    resolution: {integrity: sha512-1U6cdEYPcajRXiboSlpJx6U7TvhIKbxRRerfepAJu2hniKwJ3DHILjpU/zx3yvzSBCWcNJDoFalf7Vgd7ey/rw==}
-    dev: true
-
-  /workbox-precaching/6.4.2:
-    resolution: {integrity: sha512-CZ6uwFN/2wb4noHVlALL7UqPFbLfez/9S2GAzGAb0Sk876ul9ukRKPJJ6gtsxfE2HSTwqwuyNVa6xWyeyJ1XSA==}
-    dependencies:
-      workbox-core: 6.4.2
-      workbox-routing: 6.4.2
-      workbox-strategies: 6.4.2
-    dev: true
-
-  /workbox-routing/6.4.2:
-    resolution: {integrity: sha512-0ss/n9PAcHjTy4Ad7l2puuod4WtsnRYu9BrmHcu6Dk4PgWeJo1t5VnGufPxNtcuyPGQ3OdnMdlmhMJ57sSrrSw==}
-    dependencies:
-      workbox-core: 6.4.2
-    dev: true
-
-  /workbox-strategies/6.4.2:
-    resolution: {integrity: sha512-YXh9E9dZGEO1EiPC3jPe2CbztO5WT8Ruj8wiYZM56XqEJp5YlGTtqRjghV+JovWOqkWdR+amJpV31KPWQUvn1Q==}
-    dependencies:
-      workbox-core: 6.4.2
-    dev: true
-
-  /workbox-window/6.4.2:
-    resolution: {integrity: sha512-KVyRKmrJg7iB+uym/B/CnEUEFG9CvnTU1Bq5xpXHbtgD9l+ShDekSl1wYpqw/O0JfeeQVOFb8CiNfvnwWwqnWQ==}
-    dependencies:
-      '@types/trusted-types': 2.0.2
-      workbox-core: 6.4.2
     dev: true
 
   /wrappy/1.0.2:
