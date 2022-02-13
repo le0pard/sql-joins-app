@@ -6,6 +6,10 @@ import adapter from '@sveltejs/adapter-static'
 const config = {
   kit: {
     adapter: adapter(),
+    serviceWorker: {
+      register: true,
+      files: (filepath) => /\.(png|svg|ico|webmanifest)$/.test(filepath)
+    },
     vite: {
       resolve: {
         alias: {
