@@ -4,12 +4,11 @@ SQL Joins Visualizer help to you build SQL JOIN between two tables by using of V
 
 ## Development
 
-[Main logic](https://github.com/le0pard/sql-joins-app/blob/master/source/javascripts/sql_joins.coffee).
-Web app build on top of [middleman](http://middlemanapp.com/). To start it in development mode, you need install ruby and run in terminal:
+To start it in development mode, you need install node.js and run:
 
 ```bash
-$ bundle # get all deps
-$ middleman server # start server on 4567 port
+$ pnpm install # get all deps
+$ pnpm run dev # start server on 3000 port
 ```
 
 ## Contributing
