@@ -1,6 +1,6 @@
-const timestamp = 1644789946332;
+const timestamp = 1644790423730;
 const build = [
-  "/_app/start-b732c57a.js",
+  "/_app/start-49e3c3f5.js",
   "/_app/pages/__layout.svelte-308dfc07.js",
   "/_app/assets/pages/__layout.svelte-5403f75c.css",
   "/_app/error.svelte-94fb5597.js",
@@ -28,15 +28,11 @@ var activateEvent = (event) => {
   }));
 };
 var installEvent = (event) => {
-  event.waitUntil(caches.open(CACHE_NAME).then((cache) => {
-    return Promise.all([
-      cache.addAll(["/"]),
-      cache.addAll(build),
-      cache.addAll(files)
-    ]);
-  }).then(() => {
-    return self.skipWaiting();
-  }));
+  event.waitUntil(caches.open(CACHE_NAME).then((cache) => Promise.all([
+    cache.addAll(["/"]),
+    cache.addAll(build),
+    cache.addAll(files)
+  ])).then(() => self.skipWaiting()));
 };
 var fetchEvent = (event) => {
   event.respondWith(caches.match(event.request).then((cacheResponse) => {
