@@ -10,13 +10,13 @@
   }
 
   .hero-title {
-    color: #fff;
+    color: #040507;
     font-size: 2.5rem;
     padding: 0 1rem;
   }
 
   .hero-text {
-    color: #f2d0c2;
+    color: #040507;
     padding: 0 0.5rem;
     font-size: 1.2rem;
   }

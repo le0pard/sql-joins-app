@@ -36,7 +36,7 @@
   }
 </style>
 
-<a href="https://github.com/le0pard/sql-joins-app" class="github-corner">
+<a href="https://github.com/le0pard/sql-joins-app" class="github-corner" title="Github source code">
   <svg
     width="80"
     height="80"
