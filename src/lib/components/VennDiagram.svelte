@@ -1,5 +1,95 @@
 <svelte:options immutable="{true}" />
 
+<script>
+  import {SVG} from '@svgdotjs/svg.js'
+  import {onMount} from 'svelte'
+
+  export let handleClick = null
+
+  let leftCircleEl = null
+  let leftCircleTextEl = null
+  let intersectOfCircleEl = null
+  let rightCircleEl = null
+  let rightCircleTextEl = null
+
+  let sqlState = '0.0.0'
+
+  const animatePath = (path, isSelected = false) => {
+    const fillColor = (() => {
+      if (isSelected) {
+        return '#c25827'
+      }
+      return '#3a3a3a'
+    })()
+
+    path
+      .animate({
+        duration: 600,
+        delay: 0,
+        when: 'now'
+      })
+      .attr({
+        fill: fillColor
+      })
+  }
+
+  const handlePathClick = (options = {}) => {
+    let [left, center, right] = sqlState.split('.').map((i) => Number(i))
+
+    if (options.left) {
+      left = left === 1 ? 0 : 1
+      animatePath(leftCircleEl, left === 1)
+    }
+    if (options.center) {
+      center = center === 1 ? 0 : 1
+      animatePath(intersectOfCircleEl, center === 1)
+    }
+    if (options.right) {
+      right = right === 1 ? 0 : 1
+      animatePath(rightCircleEl, right === 1)
+    }
+
+    sqlState = [left, center, right].map((i) => String(i)).join('.')
+
+    if (handleClick) {
+      handleClick.call(null, sqlState)
+    }
+  }
+
+  onMount(() => {
+    leftCircleEl = SVG('path#leftCircle')
+    leftCircleTextEl = SVG('text#leftCircleText')
+    intersectOfCircleEl = SVG('path#intersectOfCircle')
+    rightCircleEl = SVG('path#rightCircle')
+    rightCircleTextEl = SVG('text#rightCircleText')
+
+    leftCircleEl.on('click', () => handlePathClick({left: true}))
+    leftCircleTextEl.on('click', () => handlePathClick({left: true}))
+    intersectOfCircleEl.on('click', () => handlePathClick({center: true}))
+    rightCircleEl.on('click', () => handlePathClick({right: true}))
+    rightCircleTextEl.on('click', () => handlePathClick({right: true}))
+
+    return () => {
+      leftCircleEl.off('click')
+      leftCircleTextEl.off('click')
+      intersectOfCircleEl.off('click')
+      rightCircleEl.off('click')
+      rightCircleTextEl.off('click')
+    }
+  })
+</script>
+
+<style lang="postcss">
+  #leftCircle,
+  #leftCircleText,
+  #intersectOfCircle,
+  #rightCircleText,
+  #rightCircle {
+    cursor: pointer;
+    user-select: none;
+  }
+</style>
+
 <svg
   id="sqlJoinControlSvg"
   enable-background="new 0 0 332.609 198.913"

@@ -6,6 +6,14 @@
 </script>
 
 <style lang="postcss">
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem auto;
+    max-width: 51rem;
+    padding: 1rem;
+    border: #5d5d5d 1px solid;
+  }
 </style>
 
 <svelte:head>
