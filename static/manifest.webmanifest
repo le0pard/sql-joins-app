@@ -4,7 +4,7 @@
   "description": "SQL Joins visualizer",
   "start_url": "/",
   "display": "fullscreen",
-  "theme_color": "#c25827",
+  "theme_color": "#2d2d2d",
   "background_color": "#2d2d2d",
   "icons": [
     {
