@@ -5,7 +5,8 @@
       "$lib": ["src/lib"],
       "$lib/*": ["src/lib/*"],
       "@root": ["src"],
-      "@components": ["src/lib/components"]
+      "@components": ["src/lib/components"],
+      "@utils": ["src/lib/utils"]
     }
   },
   "include": ["src/**/*.d.ts", "src/**/*.js", "src/**/*.svelte"]

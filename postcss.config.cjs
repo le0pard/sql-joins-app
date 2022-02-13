@@ -3,7 +3,6 @@ const browserlist = require('./browserslist.config.cjs')
 const config = {
   plugins: [
     require('postcss-import'),
-    require('rucksack-css'),
     require('postcss-preset-env')({
       stage: 1,
       browsers: browserlist,
@@ -14,7 +13,8 @@ const config = {
           preserve: true
         }
       }
-    })
+    }),
+    require('postcss-reporter')
   ]
 }
 
