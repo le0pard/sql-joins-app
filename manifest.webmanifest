@@ -1,0 +1,21 @@
+{
+  "short_name": "SQLJoins",
+  "name": "SQLJoins",
+  "description": "SQL Joins visualizer",
+  "start_url": "/",
+  "display": "fullscreen",
+  "theme_color": "#c25827",
+  "background_color": "#2d2d2d",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}
