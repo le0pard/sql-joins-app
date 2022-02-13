@@ -12,6 +12,7 @@
   .hero-title {
     color: #fff;
     font-size: 2.5rem;
+    padding: 0 1rem;
   }
 
   .hero-text {
