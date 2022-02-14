@@ -1,7 +1,7 @@
 export const DEFAULT_VALUE = '0.0.0'
 
 export const SQL_MAP = {
-  '0.0.0': {
+  [DEFAULT_VALUE]: {
     sql: '',
     description: 'Please select how do you want to do SQL JOIN between two table'
   },
