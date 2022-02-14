@@ -81,6 +81,21 @@
 </script>
 
 <style lang="postcss">
+  #sqlJoinControlSvg {
+    height: 12rem;
+  }
+
+  @media (min-width: 420px) and (max-width: 1440px) {
+    #sqlJoinControlSvg {
+      height: calc(12rem + (16 - 12) * ((100vw - 420px) / (1440 - 420)));
+    }
+  }
+  @media (min-width: 1440px) {
+    #sqlJoinControlSvg {
+      height: 16rem;
+    }
+  }
+
   #leftCircle,
   #leftCircleText,
   #intersectOfCircle,
@@ -94,9 +109,7 @@
 <svg
   id="sqlJoinControlSvg"
   enable-background="new 0 0 332.609 198.913"
-  height="198.913"
   viewBox="0 0 332.609 198.913"
-  width="332.609"
   xmlns="http://www.w3.org/2000/svg">
   <g id="mainLayer" fill="#3a3a3a" stroke="#fff" stroke-width="2">
     <path

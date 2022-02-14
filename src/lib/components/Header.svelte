@@ -13,6 +13,7 @@
     color: #040507;
     font-size: 2.5rem;
     padding: 0 1rem;
+    margin: 0.5rem 0 0.3rem 0;
   }
 
   .hero-text {
