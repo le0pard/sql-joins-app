@@ -1,12 +1,16 @@
-const timestamp = 1645295924149;
+const timestamp = {
+  toString: () => {
+    throw new Error("`timestamp` has been removed from $service-worker. Use `version` instead");
+  }
+};
 const build = [
-  "/_app/start-f5a28db7.js",
-  "/_app/pages/__layout.svelte-308dfc07.js",
+  "/_app/start-ccba8b02.js",
+  "/_app/pages/__layout.svelte-9fff04f5.js",
   "/_app/assets/pages/__layout.svelte-5403f75c.css",
-  "/_app/error.svelte-94fb5597.js",
-  "/_app/pages/index.svelte-2587ff82.js",
+  "/_app/error.svelte-c8d56c83.js",
+  "/_app/pages/index.svelte-775869b3.js",
   "/_app/assets/pages/index.svelte-4c0fa22a.css",
-  "/_app/chunks/vendor-88af7281.js"
+  "/_app/chunks/vendor-3bb54997.js"
 ];
 const files = [
   "/apple-touch-icon.png",
