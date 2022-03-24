@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="SQL Joins visualizer" />
+    <meta
+      name="keywords"
+      content="sql, joins, mysql, postgresql, oracle, ms-sql, sqlite, open source" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#2d2d2d" />
+
+    <!-- favicons -->
+    <link rel="icon" href="./favicon.ico" sizes="any" />
+    <!-- 32×32 -->
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+    <!-- 180×180 -->
+    <link rel="manifest" href="./manifest.webmanifest" />
+
+    <meta http-equiv="content-security-policy" content=""><title>SQL Joins Visualizer</title>
+	<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-5403f75c.css">
+	<link rel="stylesheet" href="/_app/assets/pages/index.svelte-4c0fa22a.css">
+	<link rel="modulepreload" href="/_app/start-97bc6ee6.js">
+	<link rel="modulepreload" href="/_app/chunks/vendor-3bb54997.js">
+	<link rel="modulepreload" href="/_app/pages/__layout.svelte-9fff04f5.js">
+	<link rel="modulepreload" href="/_app/pages/index.svelte-775869b3.js">
+				<script>
+		if ('serviceWorker' in navigator) {
+			navigator.serviceWorker.register('/service-worker.js');
+		}
+	</script>
+  </head>
+  <body>
+    <div id="svelte">
+
+
+
+
+
+
+
+
+<a href="https://github.com/le0pard/sql-joins-app" class="github-corner svelte-1syk2z1" title="Github source code"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#fff; color:#151513; position: absolute; top: 0; border: 0; right: 0;"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm svelte-1syk2z1"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+
+
+
+
+
+
+
+<div class="wrapper svelte-9zvsa7">
+
+
+
+<div class="hero-block svelte-12vw24o"><h1 class="hero-title svelte-12vw24o">SQL Joins Visualizer</h1>
+  <p class="hero-text svelte-12vw24o">SQL Joins Visualizer help to you build SQL JOIN between two tables by using of <a href="//en.wikipedia.org/wiki/Venn_diagram" target="_blank" rel="noopener noreferrer">Venn diagrams</a></p></div>
+  
+
+
+
+
+
+<div class="visualizer-block svelte-z5ic9v"><div class="venn-diagram svelte-z5ic9v">
+
+
+
+
+
+<svg id="sqlJoinControlSvg" enable-background="new 0 0 332.609 198.913" viewBox="0 0 332.609 198.913" xmlns="http://www.w3.org/2000/svg" class="svelte-o3psre"><g id="mainLayer" fill="#3a3a3a" stroke="#fff" stroke-width="2"><path id="leftCircle" d="m100.736 194.11c-52.499 0-95.21-42.394-95.21-94.5s42.711-94.5 95.21-94.5c22.376 0 44.062 7.863 61.197 22.166-19.975 18.744-31.408 45.041-31.408 72.334s11.433 53.59 31.408 72.334c-17.134 14.303-38.82 22.166-61.197 22.166" class="svelte-o3psre"></path><path id="intersectOfCircle" d="m165.735 168.593c-19.211-17.847-30.21-42.937-30.21-68.984 0-26.048 10.999-51.136 30.21-68.984 19.21 17.848 30.208 42.937 30.208 68.984s-10.997 51.136-30.208 68.984" class="svelte-o3psre"></path><path id="rightCircle" d="m230.735 194.11c-22.378 0-44.063-7.863-61.199-22.166 19.976-18.744 31.408-45.041 31.408-72.334s-11.433-53.59-31.408-72.334c17.136-14.303 38.821-22.166 61.199-22.166 52.498 0 95.208 42.393 95.208 94.5s-42.71 94.5-95.208 94.5" class="svelte-o3psre"></path></g><text id="leftCircleText" fill="#fff" font-family="'Roboto Slab', serif" font-size="30" x="80" y="112" class="svelte-o3psre">A</text><text id="rightCircleText" fill="#fff" font-family="'Roboto Slab', serif" font-size="30" x="230" y="112" class="svelte-o3psre">B</text></svg></div>
+
+  <p class="sql-description svelte-z5ic9v">Please select how do you want to do SQL JOIN between two table</p>
+
+  <div class="sql-code-block svelte-z5ic9v"><pre class="sql-code-pre svelte-z5ic9v"><code class="sql-code-text hljs language-sql svelte-z5ic9v"><!-- HTML_TAG_START --><!-- HTML_TAG_END --></code></pre></div>
+
+  <div class="copy-button-block svelte-z5ic9v"><button class="copy-button svelte-z5ic9v" disabled title="Click to copy sql">Copy SQL</button></div></div></div>
+
+
+		<script type="module" data-hydrate="ss4epv">
+		import { start } from "/_app/start-97bc6ee6.js";
+		start({
+			target: document.querySelector('[data-hydrate="ss4epv"]').parentNode,
+			paths: {"base":"","assets":""},
+			session: {},
+			route: true,
+			spa: false,
+			trailing_slash: "never",
+			hydrate: {
+				status: 200,
+				error: null,
+				nodes: [
+					import("/_app/pages/__layout.svelte-9fff04f5.js"),
+						import("/_app/pages/index.svelte-775869b3.js")
+				],
+				params: {},
+				routeId: ""
+			}
+		});
+	</script></div>
+  </body>
+</html>
