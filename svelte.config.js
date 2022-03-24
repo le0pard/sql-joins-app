@@ -10,6 +10,9 @@ const config = {
       register: true,
       files: (filepath) => /\.(png|svg|ico|webmanifest)$/.test(filepath)
     },
+    prerender: {
+      default: true
+    },
     vite: {
       resolve: {
         alias: {
