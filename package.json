@@ -10,23 +10,23 @@
   },
   "devDependencies": {
     "@sveltejs/adapter-static": "^1.0.0-next.29",
-    "@sveltejs/kit": "^1.0.0-next.303",
+    "@sveltejs/kit": "1.0.0-next.312",
     "@svgdotjs/svg.js": "^3.1.2",
     "clipboard": "2.0.10",
-    "eslint": "8.12.0",
+    "eslint": "8.13.0",
     "eslint-config-prettier": "8.5.0",
     "eslint-plugin-svelte3": "3.4.1",
-    "highlight.js": "11.5.0",
+    "highlight.js": "11.5.1",
     "normalize.css": "^8.0.1",
     "postcss": "8.4.12",
     "postcss-import": "14.1.0",
     "postcss-load-config": "3.1.4",
     "postcss-preset-env": "7.4.3",
     "postcss-reporter": "^7.0.5",
-    "prettier": "2.6.1",
-    "prettier-plugin-svelte": "2.6.0",
-    "svelte": "3.46.5",
-    "svelte-preprocess": "4.10.4"
+    "prettier": "2.6.2",
+    "prettier-plugin-svelte": "2.7.0",
+    "svelte": "3.47.0",
+    "svelte-preprocess": "4.10.6"
   },
   "type": "module"
 }
