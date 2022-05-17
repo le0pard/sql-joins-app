@@ -20,13 +20,15 @@
     <meta http-equiv="content-security-policy" content=""><title>SQL Joins Visualizer</title>
 	<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-fcfd45e0.css">
 	<link rel="stylesheet" href="/_app/assets/pages/index.svelte-4c0fa22a.css">
-	<link rel="modulepreload" href="/_app/start-1e960dab.js">
+	<link rel="modulepreload" href="/_app/start-10725413.js">
 	<link rel="modulepreload" href="/_app/chunks/index-349d637e.js">
 	<link rel="modulepreload" href="/_app/pages/__layout.svelte-dfc2a0da.js">
 	<link rel="modulepreload" href="/_app/pages/index.svelte-9e3a53bf.js">
 				<script>
 		if ('serviceWorker' in navigator) {
-			navigator.serviceWorker.register('/service-worker.js');
+			addEventListener('load', () => {
+				navigator.serviceWorker.register('/service-worker.js');
+			});
 		}
 	</script>
   </head>
@@ -78,7 +80,7 @@
 
 
 		<script type="module" data-hydrate="lo6jqb">
-		import { start } from "/_app/start-1e960dab.js";
+		import { start } from "/_app/start-10725413.js";
 		start({
 			target: document.querySelector('[data-hydrate="lo6jqb"]').parentNode,
 			paths: {"base":"","assets":""},
