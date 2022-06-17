@@ -15,7 +15,7 @@ specifiers:
   postcss-load-config: 4.0.1
   postcss-preset-env: 7.7.1
   postcss-reporter: ^7.0.5
-  prettier: 2.6.2
+  prettier: 2.7.1
   prettier-plugin-svelte: 2.7.0
   svelte: 3.48.0
   svelte-preprocess: 4.10.7
@@ -35,8 +35,8 @@ devDependencies:
   postcss-load-config: 4.0.1_postcss@8.4.14
   postcss-preset-env: 7.7.1_postcss@8.4.14
   postcss-reporter: 7.0.5_postcss@8.4.14
-  prettier: 2.6.2
-  prettier-plugin-svelte: 2.7.0_kkjbqzpydplecjtkxrgomroeru
+  prettier: 2.7.1
+  prettier-plugin-svelte: 2.7.0_nakrehnrzdf7fdea5k3a4dfy4m
   svelte: 3.48.0
   svelte-preprocess: 4.10.7_x4nqt44wnukty73um2kz4qdzya
 
@@ -1625,18 +1625,18 @@ packages:
     engines: {node: '>= 0.8.0'}
     dev: true
 
-  /prettier-plugin-svelte/2.7.0_kkjbqzpydplecjtkxrgomroeru:
+  /prettier-plugin-svelte/2.7.0_nakrehnrzdf7fdea5k3a4dfy4m:
     resolution: {integrity: sha512-fQhhZICprZot2IqEyoiUYLTRdumULGRvw0o4dzl5jt0jfzVWdGqeYW27QTWAeXhoupEZJULmNoH3ueJwUWFLIA==}
     peerDependencies:
       prettier: ^1.16.4 || ^2.0.0
       svelte: ^3.2.0
     dependencies:
-      prettier: 2.6.2
+      prettier: 2.7.1
       svelte: 3.48.0
     dev: true
 
-  /prettier/2.6.2:
-    resolution: {integrity: sha512-PkUpF+qoXTqhOeWL9fu7As8LXsIUZ1WYaJiY/a7McAQzxjk82OF0tibkFXVCDImZtWxbvojFjerkiLb0/q8mew==}
+  /prettier/2.7.1:
+    resolution: {integrity: sha512-ujppO+MkdPqoVINuDFDRLClm7D78qbDt0/NR+wp5FqEZOoTNAjPHWj17QRhu7geIHJfcNhRk1XVQmF8Bp3ye+g==}
     engines: {node: '>=10.13.0'}
     hasBin: true
     dev: true
