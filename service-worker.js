@@ -1,13 +1,12 @@
-const build = [
-  "/_app/immutable/start-8993bfb4.js",
-  "/_app/immutable/pages/__layout.svelte-bb172639.js",
-  "/_app/immutable/assets/pages/__layout.svelte-fcfd45e0.css",
-  "/_app/immutable/error.svelte-4496360b.js",
-  "/_app/immutable/pages/index.svelte-a835fd16.js",
-  "/_app/immutable/assets/pages/index.svelte-4c0fa22a.css",
-  "/_app/immutable/chunks/index-168ca386.js"
-];
-const files = [
+const n = [
+  "/_app/immutable/start-8bcaf298.js",
+  "/_app/immutable/pages/__layout.svelte-420e7561.js",
+  "/_app/immutable/assets/__layout-30d161eb.css",
+  "/_app/immutable/error.svelte-18aa0353.js",
+  "/_app/immutable/pages/index.svelte-14513b44.js",
+  "/_app/immutable/assets/index-80f8ecfa.css",
+  "/_app/immutable/chunks/index-b7357a12.js"
+], i = [
   "/apple-touch-icon.png",
   "/favicon.ico",
   "/favicon.svg",
@@ -15,27 +14,17 @@ const files = [
   "/icon-512.png",
   "/manifest.webmanifest",
   "/maskable_icon.png"
-];
-const version = "1657881803505";
-const CACHE_NAME = `sql-joins-${version}`;
-var activateEvent = (event) => {
-  event.waitUntil(caches.keys().then((keys) => keys.filter((key) => key !== CACHE_NAME)).then((keysToRemove) => Promise.all(keysToRemove.map((key) => caches.delete(key)))).then(() => self.clients.claim()));
-};
-var installEvent = (event) => {
-  event.waitUntil(caches.open(CACHE_NAME).then((cache) => Promise.all([
-    cache.addAll(["/"]),
-    cache.addAll(build),
-    cache.addAll(files)
+], l = "1658158876913", a = `sql-joins-${l}`, c = (t) => {
+  t.waitUntil(caches.keys().then((e) => e.filter((s) => s !== a)).then((e) => Promise.all(e.map((s) => caches.delete(s)))).then(() => self.clients.claim()));
+}, p = (t) => {
+  t.waitUntil(caches.open(a).then((e) => Promise.all([
+    e.addAll(["/"]),
+    e.addAll(n),
+    e.addAll(i)
   ])).then(() => self.skipWaiting()));
+}, o = (t) => {
+  t.respondWith(caches.match(t.request).then((e) => e || fetch(t.request)));
 };
-var fetchEvent = (event) => {
-  event.respondWith(caches.match(event.request).then((cachedResponse) => {
-    if (cachedResponse) {
-      return cachedResponse;
-    }
-    return fetch(event.request);
-  }));
-};
-self.addEventListener("install", installEvent);
-self.addEventListener("activate", activateEvent);
-self.addEventListener("fetch", fetchEvent);
+self.addEventListener("install", p);
+self.addEventListener("activate", c);
+self.addEventListener("fetch", o);
