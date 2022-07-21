@@ -3,7 +3,13 @@ import {sveltekit} from '@sveltejs/kit/vite'
 
 /** @type {import('vite').UserConfig} */
 const config = {
-  plugins: [sveltekit()],
+  plugins: [
+    sveltekit({
+      compilerOptions: {
+        cssHash: ({ hash, css }) => `s-${hash(css)}`
+      }
+    })
+  ],
   resolve: {
     alias: {
       '@root': path.resolve('./src'),
