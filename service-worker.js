@@ -1,11 +1,11 @@
 const n = [
-  "/_app/immutable/start-b8d94e55.js",
-  "/_app/immutable/pages/__layout.svelte-420e7561.js",
+  "/_app/immutable/start-c2c20531.js",
+  "/_app/immutable/pages/__layout.svelte-c3ddd8fe.js",
   "/_app/immutable/assets/__layout-30d161eb.css",
-  "/_app/immutable/error.svelte-18aa0353.js",
-  "/_app/immutable/pages/index.svelte-14513b44.js",
+  "/_app/immutable/error.svelte-50f8d6ba.js",
+  "/_app/immutable/pages/index.svelte-1e5cddb5.js",
   "/_app/immutable/assets/index-80f8ecfa.css",
-  "/_app/immutable/chunks/index-b7357a12.js"
+  "/_app/immutable/chunks/index-fd5f3aee.js"
 ], i = [
   "/apple-touch-icon.png",
   "/favicon.ico",
@@ -14,17 +14,25 @@ const n = [
   "/icon-512.png",
   "/manifest.webmanifest",
   "/maskable_icon.png"
-], l = "1658952630853", a = `sql-joins-${l}`, c = (t) => {
-  t.waitUntil(caches.keys().then((e) => e.filter((s) => s !== a)).then((e) => Promise.all(e.map((s) => caches.delete(s)))).then(() => self.clients.claim()));
+], l = "1658953092099", a = `sql-joins-${l}`, c = (t) => {
+  t.waitUntil(
+    caches.keys().then((e) => e.filter((s) => s !== a)).then((e) => Promise.all(e.map((s) => caches.delete(s)))).then(() => self.clients.claim())
+  );
+}, d = (t) => {
+  t.waitUntil(
+    caches.open(a).then(
+      (e) => Promise.all([
+        e.addAll(["/"]),
+        e.addAll(n),
+        e.addAll(i)
+      ])
+    ).then(() => self.skipWaiting())
+  );
 }, p = (t) => {
-  t.waitUntil(caches.open(a).then((e) => Promise.all([
-    e.addAll(["/"]),
-    e.addAll(n),
-    e.addAll(i)
-  ])).then(() => self.skipWaiting()));
-}, o = (t) => {
-  t.respondWith(caches.match(t.request).then((e) => e || fetch(t.request)));
+  t.respondWith(
+    caches.match(t.request).then((e) => e || fetch(t.request))
+  );
 };
-self.addEventListener("install", p);
+self.addEventListener("install", d);
 self.addEventListener("activate", c);
-self.addEventListener("fetch", o);
+self.addEventListener("fetch", p);
