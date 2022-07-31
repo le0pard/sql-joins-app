@@ -10,7 +10,7 @@
   },
   "devDependencies": {
     "@sveltejs/adapter-static": "1.0.0-next.38",
-    "@sveltejs/kit": "1.0.0-next.396",
+    "@sveltejs/kit": "1.0.0-next.400",
     "@svgdotjs/svg.js": "^3.1.2",
     "clipboard": "2.0.11",
     "eslint": "8.20.0",
@@ -27,7 +27,7 @@
     "prettier-plugin-svelte": "2.7.0",
     "svelte": "3.49.0",
     "svelte-preprocess": "4.10.7",
-    "vite": "3.0.3"
+    "vite": "3.0.4"
   },
   "type": "module"
 }
