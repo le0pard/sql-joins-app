@@ -10,10 +10,10 @@
   },
   "devDependencies": {
     "@sveltejs/adapter-static": "1.0.0-next.39",
-    "@sveltejs/kit": "1.0.0-next.405",
+    "@sveltejs/kit": "1.0.0-next.423",
     "@svgdotjs/svg.js": "^3.1.2",
     "clipboard": "2.0.11",
-    "eslint": "8.21.0",
+    "eslint": "8.22.0",
     "eslint-config-prettier": "8.5.0",
     "eslint-plugin-svelte3": "4.0.0",
     "highlight.js": "11.6.0",
@@ -21,13 +21,13 @@
     "postcss": "8.4.16",
     "postcss-import": "14.1.0",
     "postcss-load-config": "4.0.1",
-    "postcss-preset-env": "7.7.2",
+    "postcss-preset-env": "7.8.0",
     "postcss-reporter": "^7.0.5",
     "prettier": "2.7.1",
     "prettier-plugin-svelte": "2.7.0",
     "svelte": "3.49.0",
     "svelte-preprocess": "4.10.7",
-    "vite": "3.0.4"
+    "vite": "3.0.8"
   },
   "type": "module"
 }
