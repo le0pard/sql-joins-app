@@ -17,20 +17,23 @@
     <!-- 180×180 -->
     <link rel="manifest" href="./manifest.webmanifest" />
 
-    <meta http-equiv="content-security-policy" content=""><title>SQL Joins Visualizer</title>
-	<link href="./_app/immutable/assets/+layout-1126832e.css" rel="stylesheet">
-	<link href="./_app/immutable/assets/+page-80f8ecfa.css" rel="stylesheet">
-	<link rel="modulepreload" href="./_app/immutable/start-bc73cb7a.js">
-	<link rel="modulepreload" href="./_app/immutable/chunks/index-3885a71e.js">
-	<link rel="modulepreload" href="./_app/immutable/components/pages/_layout.svelte-4eebe51a.js">
-	<link rel="modulepreload" href="./_app/immutable/components/pages/_page.svelte-97557f20.js">
-			<script>
-		if ('serviceWorker' in navigator) {
-			addEventListener('load', function () {
-				navigator.serviceWorker.register('/service-worker.js');
-			});
-		}
-	</script>
+    <meta http-equiv="content-security-policy" content="">
+		<link href="./_app/immutable/assets/_layout-1126832e.css" rel="stylesheet">
+		<link href="./_app/immutable/assets/_page-80f8ecfa.css" rel="stylesheet">
+		<link rel="modulepreload" href="./_app/immutable/start-5a81860c.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index-cca17a7f.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/singletons-d6e29470.js">
+		<link rel="modulepreload" href="./_app/immutable/components/pages/_layout.svelte-96bdce20.js">
+		<link rel="modulepreload" href="./_app/immutable/modules/pages/_layout.js-7b9cbfbc.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/_layout-8d2a742b.js">
+		<link rel="modulepreload" href="./_app/immutable/components/pages/_page.svelte-53186b69.js">
+		<script>
+			if ('serviceWorker' in navigator) {
+				addEventListener('load', function () {
+					navigator.serviceWorker.register('./service-worker.js');
+				});
+			}
+		</script><title>SQL Joins Visualizer</title><!-- HEAD_svelte-1jc0kj0_START --><!-- HEAD_svelte-1jc0kj0_END -->
   </head>
   <body>
     <div id="svelte">
@@ -80,25 +83,24 @@
 
 
 		<script type="module" data-sveltekit-hydrate="lo6jqb">
-		import { set_public_env, start } from "./_app/immutable/start-bc73cb7a.js";
+			import { start } from "./_app/immutable/start-5a81860c.js";
 
-		set_public_env({});
-
-		start({
-			target: document.querySelector('[data-sveltekit-hydrate="lo6jqb"]').parentNode,
-			paths: {"base":"","assets":""},
-			route: true,
-			spa: false,
-			trailing_slash: "never",
-			hydrate: {
-				status: 200,
-				error: null,
-				node_ids: [0, 2],
-				params: {},
-				routeId: ""
-			}
-		});
-	</script>
+			start({
+				env: {},
+				hydrate: {
+					status: 200,
+					error: null,
+					node_ids: [0, 2],
+					params: {},
+					route: {"id":"/"},
+					data: [null,null],
+					form: null
+				},
+				paths: {"base":"","assets":""},
+				target: document.querySelector('[data-sveltekit-hydrate="lo6jqb"]').parentNode,
+				trailing_slash: "never"
+			});
+		</script>
 	</div>
   </body>
 </html>
