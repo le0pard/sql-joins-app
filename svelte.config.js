@@ -8,9 +8,6 @@ const config = {
     serviceWorker: {
       register: true,
       files: (filepath) => /\.(png|svg|ico|webmanifest)$/.test(filepath)
-    },
-    prerender: {
-      default: true
     }
   },
   preprocess: [
