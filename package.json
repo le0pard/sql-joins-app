@@ -10,11 +10,11 @@
   },
   "devDependencies": {
     "@sveltejs/adapter-static": "1.0.0",
-    "@sveltejs/kit": "1.0.0",
+    "@sveltejs/kit": "1.0.2",
     "@svgdotjs/svg.js": "^3.1.2",
     "clipboard": "2.0.11",
-    "eslint": "8.29.0",
-    "eslint-config-prettier": "8.5.0",
+    "eslint": "8.31.0",
+    "eslint-config-prettier": "8.6.0",
     "eslint-plugin-svelte3": "4.0.0",
     "highlight.js": "11.7.0",
     "normalize.css": "^8.0.1",
@@ -27,7 +27,7 @@
     "prettier-plugin-svelte": "2.9.0",
     "svelte": "3.55.0",
     "svelte-preprocess": "5.0.0",
-    "vite": "4.0.1"
+    "vite": "4.0.4"
   },
   "type": "module"
 }
