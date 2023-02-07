@@ -25,7 +25,6 @@ jobs:
         uses: actions/setup-node@v3
         with:
           check-latest: true
-          cache: 'pnpm'
           node-version-file: '.tool-versions'
 
       - uses: pnpm/action-setup@v2
