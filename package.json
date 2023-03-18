@@ -9,12 +9,12 @@
     "format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. src/"
   },
   "devDependencies": {
-    "@sveltejs/adapter-static": "2.0.0",
-    "@sveltejs/kit": "1.5.0",
+    "@sveltejs/adapter-static": "2.0.1",
+    "@sveltejs/kit": "1.12.0",
     "@svgdotjs/svg.js": "^3.1.2",
     "clipboard": "2.0.11",
-    "eslint": "8.33.0",
-    "eslint-config-prettier": "8.6.0",
+    "eslint": "8.36.0",
+    "eslint-config-prettier": "8.7.0",
     "eslint-plugin-svelte3": "4.0.0",
     "highlight.js": "11.7.0",
     "normalize.css": "^8.0.1",
@@ -23,11 +23,11 @@
     "postcss-load-config": "4.0.1",
     "postcss-preset-env": "8.0.1",
     "postcss-reporter": "^7.0.5",
-    "prettier": "2.8.3",
+    "prettier": "2.8.4",
     "prettier-plugin-svelte": "2.9.0",
-    "svelte": "3.55.1",
-    "svelte-preprocess": "5.0.1",
-    "vite": "4.1.1"
+    "svelte": "3.57.0",
+    "svelte-preprocess": "5.0.3",
+    "vite": "4.2.0"
   },
   "type": "module"
 }
