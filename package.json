@@ -29,5 +29,12 @@
     "svelte-preprocess": "5.0.4",
     "vite": "4.4.8"
   },
-  "type": "module"
+  "type": "module",
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "eslint-plugin-svelte3"
+      ]
+    }
+  }
 }
