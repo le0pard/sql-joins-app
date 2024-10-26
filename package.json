@@ -6,7 +6,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint --ignore-path .gitignore src/",
-    "format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. src/"
+    "format": "prettier --ignore-path .gitignore --write src/"
   },
   "devDependencies": {
     "@sveltejs/adapter-static": "3.0.6",

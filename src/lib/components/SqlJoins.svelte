@@ -127,7 +127,8 @@
 
   <div class="sql-code-block">
     <!-- eslint-disable svelte/no-at-html-tags -->
-    <pre class="sql-code-pre"><code class="sql-code-text hljs language-sql">{@html sqlExample}</code></pre>
+    <pre class="sql-code-pre"><code class="sql-code-text hljs language-sql"
+        >{@html sqlExample}</code></pre>
   </div>
 
   <div class="copy-button-block">
