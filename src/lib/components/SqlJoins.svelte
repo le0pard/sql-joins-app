@@ -126,12 +126,8 @@
   <p class="sql-description">{descriptionText}</p>
 
   <div class="sql-code-block">
-    <pre class="sql-code-pre">
-      <code class="sql-code-text hljs language-sql">
-        <!-- eslint-disable svelte/no-at-html-tags -->
-        {@html sqlExample}
-      </code>
-    </pre>
+    <!-- eslint-disable svelte/no-at-html-tags -->
+    <pre class="sql-code-pre"><code class="sql-code-text hljs language-sql">{@html sqlExample}</code></pre>
   </div>
 
   <div class="copy-button-block">
