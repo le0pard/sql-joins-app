@@ -1,5 +1,3 @@
-<svelte:options immutable="{true}" />
-
 <script>
   import Header from '@components/Header.svelte'
   import SqlJoins from '@components/SqlJoins.svelte'

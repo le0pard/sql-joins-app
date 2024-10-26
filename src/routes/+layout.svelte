@@ -1,5 +1,3 @@
-<svelte:options immutable="{true}" />
-
 <script>
   import '@root/app.css'
 </script>
@@ -36,7 +34,11 @@
   }
 </style>
 
-<a href="https://github.com/le0pard/sql-joins-app" class="github-corner" title="Github source code">
+<a
+  href="https://github.com/le0pard/sql-joins-app"
+  class="github-corner"
+  title="Github source code"
+  aria-label="Github source code">
   <svg
     width="80"
     height="80"

@@ -1,5 +1,3 @@
-<svelte:options immutable="{true}" />
-
 <script>
   import {onMount} from 'svelte'
   import ClipboardJS from 'clipboard'
@@ -7,13 +5,13 @@
   import {DEFAULT_VALUE, SQL_MAP} from '@utils/constants'
   import VennDiagram from './VennDiagram.svelte'
 
-  let copyButtonEl = null
-  let isButtonClicked = false
+  let copyButtonEl = $state(null)
+  let isButtonClicked = $state(false)
 
-  let descriptionText = SQL_MAP[DEFAULT_VALUE].description
-  let sqlText = SQL_MAP[DEFAULT_VALUE].sql.trim()
-  $: sqlExample = hljs.highlight(sqlText, {language: 'sql'}).value
-  $: isButtonDisabled = sqlText.length === 0
+  let descriptionText = $state(SQL_MAP[DEFAULT_VALUE].description)
+  let sqlText = $state(SQL_MAP[DEFAULT_VALUE].sql.trim())
+  let sqlExample = $derived(hljs.highlight(sqlText, {language: 'sql'}).value)
+  let isButtonDisabled = $derived(sqlText.length === 0)
 
   const handleClick = (state = DEFAULT_VALUE) => {
     let {sql, description} = SQL_MAP[state]
@@ -122,22 +120,26 @@
 
 <div class="visualizer-block">
   <div class="venn-diagram">
-    <VennDiagram handleClick="{handleClick}" />
+    <VennDiagram handleClick={handleClick} />
   </div>
 
   <p class="sql-description">{descriptionText}</p>
 
   <div class="sql-code-block">
-    <pre class="sql-code-pre"><code class="sql-code-text hljs language-sql"
-        >{@html sqlExample}</code></pre>
+    <pre class="sql-code-pre">
+      <code class="sql-code-text hljs language-sql">
+        <!-- eslint-disable svelte/no-at-html-tags -->
+        {@html sqlExample}
+      </code>
+    </pre>
   </div>
 
   <div class="copy-button-block">
     <button
-      bind:this="{copyButtonEl}"
+      bind:this={copyButtonEl}
       class="copy-button"
-      disabled="{isButtonDisabled}"
-      class:copy-button-copied="{isButtonClicked}"
+      disabled={isButtonDisabled}
+      class:copy-button-copied={isButtonClicked}
       title="Click to copy sql">
       {isButtonClicked ? 'Copied!' : 'Copy SQL'}
     </button>

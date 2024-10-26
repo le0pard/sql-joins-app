@@ -1,5 +1,3 @@
-<svelte:options immutable="{true}" />
-
 <style lang="postcss">
   .hero-block {
     background: #c25827;

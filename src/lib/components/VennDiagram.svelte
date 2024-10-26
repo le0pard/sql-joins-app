@@ -1,19 +1,17 @@
-<svelte:options immutable="{true}" />
-
 <script>
   import {SVG} from '@svgdotjs/svg.js'
   import {onMount} from 'svelte'
   import {DEFAULT_VALUE} from '@utils/constants'
 
-  export let handleClick = null
+  let {handleClick} = $props()
 
-  let leftCircleEl = null
-  let leftCircleTextEl = null
-  let intersectOfCircleEl = null
-  let rightCircleEl = null
-  let rightCircleTextEl = null
+  let leftCircleEl = $state(null)
+  let leftCircleTextEl = $state(null)
+  let intersectOfCircleEl = $state(null)
+  let rightCircleEl = $state(null)
+  let rightCircleTextEl = $state(null)
 
-  let sqlState = DEFAULT_VALUE
+  let sqlState = $state(DEFAULT_VALUE)
 
   const animatePath = (path, isSelected = false) => {
     const fillColor = (() => {
