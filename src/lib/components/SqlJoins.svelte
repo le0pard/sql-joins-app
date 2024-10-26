@@ -1,8 +1,8 @@
 <script>
-  import {onMount} from 'svelte'
+  import { onMount } from 'svelte'
   import ClipboardJS from 'clipboard'
   import hljs from '@utils/highlight'
-  import {DEFAULT_VALUE, SQL_MAP} from '@utils/constants'
+  import { DEFAULT_VALUE, SQL_MAP } from '@utils/constants'
   import VennDiagram from './VennDiagram.svelte'
 
   let copyButtonEl = $state(null)
@@ -10,11 +10,11 @@
 
   let descriptionText = $state(SQL_MAP[DEFAULT_VALUE].description)
   let sqlText = $state(SQL_MAP[DEFAULT_VALUE].sql.trim())
-  let sqlExample = $derived(hljs.highlight(sqlText, {language: 'sql'}).value)
+  let sqlExample = $derived(hljs.highlight(sqlText, { language: 'sql' }).value)
   let isButtonDisabled = $derived(sqlText.length === 0)
 
   const handleClick = (state = DEFAULT_VALUE) => {
-    let {sql, description} = SQL_MAP[state]
+    let { sql, description } = SQL_MAP[state]
     sqlText = sql.trim()
     descriptionText = description
   }

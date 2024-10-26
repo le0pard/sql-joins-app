@@ -1,5 +1,5 @@
-import {build, files} from '$service-worker'
-import {CACHE_NAME} from './constants'
+import { build, files } from '$service-worker'
+import { CACHE_NAME } from './constants'
 
 export default (event) => {
   event.waitUntil(

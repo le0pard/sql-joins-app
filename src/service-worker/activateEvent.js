@@ -1,4 +1,4 @@
-import {CACHE_NAME} from './constants'
+import { CACHE_NAME } from './constants'
 
 export default (event) => {
   event.waitUntil(

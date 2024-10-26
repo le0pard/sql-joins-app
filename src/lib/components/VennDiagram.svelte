@@ -1,9 +1,9 @@
 <script>
-  import {SVG} from '@svgdotjs/svg.js'
-  import {onMount} from 'svelte'
-  import {DEFAULT_VALUE} from '@utils/constants'
+  import { SVG } from '@svgdotjs/svg.js'
+  import { onMount } from 'svelte'
+  import { DEFAULT_VALUE } from '@utils/constants'
 
-  let {handleClick} = $props()
+  let { handleClick } = $props()
 
   let leftCircleEl = $state(null)
   let leftCircleTextEl = $state(null)
@@ -62,11 +62,11 @@
     rightCircleEl = SVG('path#rightCircle')
     rightCircleTextEl = SVG('text#rightCircleText')
 
-    leftCircleEl.on('click', () => handlePathClick({left: true}))
-    leftCircleTextEl.on('click', () => handlePathClick({left: true}))
-    intersectOfCircleEl.on('click', () => handlePathClick({center: true}))
-    rightCircleEl.on('click', () => handlePathClick({right: true}))
-    rightCircleTextEl.on('click', () => handlePathClick({right: true}))
+    leftCircleEl.on('click', () => handlePathClick({ left: true }))
+    leftCircleTextEl.on('click', () => handlePathClick({ left: true }))
+    intersectOfCircleEl.on('click', () => handlePathClick({ center: true }))
+    rightCircleEl.on('click', () => handlePathClick({ right: true }))
+    rightCircleTextEl.on('click', () => handlePathClick({ right: true }))
 
     return () => {
       leftCircleEl.off('click')

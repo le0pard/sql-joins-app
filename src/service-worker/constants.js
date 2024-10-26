@@ -1,3 +1,3 @@
-import {version} from '$service-worker'
+import { version } from '$service-worker'
 
 export const CACHE_NAME = `sql-joins-${version}`

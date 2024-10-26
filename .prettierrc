@@ -3,7 +3,7 @@
   "tabWidth": 2,
   "useTabs": false,
   "singleQuote": true,
-  "bracketSpacing": false,
+  "bracketSpacing": true,
   "arrowParens": "always",
   "trailingComma": "none",
   "bracketSameLine": true,
