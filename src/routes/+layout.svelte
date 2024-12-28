@@ -1,5 +1,7 @@
 <script>
   import '@root/app.css'
+
+  let { children } = $props()
 </script>
 
 <style lang="postcss">
@@ -57,4 +59,4 @@
   </svg>
 </a>
 
-<slot />
+{@render children?.()}
