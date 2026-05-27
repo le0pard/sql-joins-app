@@ -30,10 +30,5 @@
     "svelte-preprocess": "6.0.5",
     "vite": "8.0.14"
   },
-  "pnpm": {
-    "overrides": {
-      "electron-to-chromium": "1.5.360"
-    }
-  },
   "type": "module"
 }
