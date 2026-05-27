@@ -33,9 +33,7 @@ jobs:
         with:
           version: latest
           cache: true
-          run_install: |
-            - recursive: true
-              args: [--strict-peer-dependencies]
+          run_install: true
 
       - name: Run eslint linter
         run: pnpm run lint

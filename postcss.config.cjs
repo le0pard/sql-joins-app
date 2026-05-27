@@ -1,11 +1,9 @@
-const browserlist = require('./browserslist.config.cjs')
-
 const config = {
   plugins: [
     require('postcss-import'),
     require('postcss-preset-env')({
       stage: 1,
-      browsers: browserlist,
+      browsers: ['>0.3%', 'Firefox ESR', 'not dead', 'not ie 11', 'not op_mini all'],
       features: {
         'custom-properties': {
           strict: false,
