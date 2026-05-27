@@ -1,2 +1,5 @@
 overrides:
   electron-to-chromium: '1.5.360'
+allowBuilds:
+  esbuild: true
+  svelte-preprocess: true
