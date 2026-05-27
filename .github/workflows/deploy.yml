@@ -32,7 +32,10 @@ jobs:
         id: pnpm-install
         with:
           version: latest
-          run_install: true
+          cache: true
+          run_install: |
+            - recursive: true
+              args: [--strict-peer-dependencies]
 
       - name: Run eslint linter
         run: pnpm run lint
@@ -43,7 +46,7 @@ jobs:
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v5
         with:
-          path: "build/"
+          path: 'build/'
 
   deploy:
     needs: build
