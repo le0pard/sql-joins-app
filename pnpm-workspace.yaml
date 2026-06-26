@@ -2,6 +2,9 @@ allowBuilds:
   esbuild: true
   svelte-preprocess: true
 
+minimumReleaseAgeExclude:
+  - prettier@3.8.5
+
 onlyBuiltDependencies:
   - svelte-preprocess
 
