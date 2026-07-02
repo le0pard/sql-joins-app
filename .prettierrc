@@ -9,7 +9,6 @@
   "bracketSameLine": true,
   "printWidth": 100,
   "svelteSortOrder": "options-scripts-styles-markup",
-  "svelteStrictMode": true,
   "svelteAllowShorthand": false,
   "svelteIndentScriptAndStyle": true,
   "plugins": [
