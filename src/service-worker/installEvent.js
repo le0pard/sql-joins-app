@@ -11,7 +11,19 @@ export default (event) => {
   event.waitUntil(
     caches
       .open(CACHE_NAME)
-      .then((cache) => Promise.all([cache.addAll(freshRequestsPool)]))
+      .then((cache) => {
+        return Promise.all(
+          freshRequestsPool.map((request) =>
+            fetch(request)
+              .then((response) => {
+                if (!response.ok)
+                  throw new Error(`HTTP error ${response.status} for ${request.url}`)
+                return cache.put(request, response)
+              })
+              .catch((err) => console.warn('Skipped caching asset:', err))
+          )
+        )
+      })
       .then(() => self.skipWaiting())
   )
 }
