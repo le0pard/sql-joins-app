@@ -1,3 +1,3 @@
-import { version } from '$app/env';
+import { version } from '$app/env'
 
 export const CACHE_NAME = `sql-joins-${version}`
