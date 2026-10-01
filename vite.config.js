@@ -9,10 +9,7 @@ const config = {
     sveltekit({
       adapter: adapter(),
       serviceWorker: {
-        register: true,
-        options: {
-          files: (filepath) => /\.(png|svg|ico|webmanifest)$/.test(filepath)
-        }
+        register: true
       },
       compilerOptions: {
         cssHash: ({ hash, css }) => `s-${hash(css)}`
