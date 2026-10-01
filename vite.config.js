@@ -1,7 +1,7 @@
 import path from 'path'
-import preprocess from 'svelte-preprocess'
+import { sveltePreprocess } from 'svelte-preprocess'
 import adapter from '@sveltejs/adapter-static'
-import {sveltekit} from '@sveltejs/kit/vite'
+import { sveltekit } from '@sveltejs/kit/vite'
 
 /** @type {import('vite').UserConfig} */
 const config = {
@@ -10,13 +10,15 @@ const config = {
       adapter: adapter(),
       serviceWorker: {
         register: true,
-        files: (filepath) => /\.(png|svg|ico|webmanifest)$/.test(filepath)
+        options: {
+          files: (filepath) => /\.(png|svg|ico|webmanifest)$/.test(filepath)
+        }
       },
       compilerOptions: {
         cssHash: ({ hash, css }) => `s-${hash(css)}`
       },
       preprocess: [
-        preprocess({
+        sveltePreprocess({
           postcss: true
         })
       ]
