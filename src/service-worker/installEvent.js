@@ -3,11 +3,7 @@ import { immutable, assets, prerendered } from '$app/manifest'
 import { resolve } from '$app/paths'
 import { CACHE_NAME } from './constants'
 
-const ASSETS = [...immutable, ...assets, ...prerendered]
-  .map((asset) => resolve(asset.path))
-  .filter((path) => {
-    return !OPTIMIZED_ASSETS_REGEX.test(path) && !path.startsWith('/api/')
-  })
+const ASSETS = [...immutable, ...assets, ...prerendered].map((asset) => resolve(asset.path))
 
 export default (event) => {
   const freshRequestsPool = ASSETS.map((asset) => new Request(asset, { cache: 'reload' }))
