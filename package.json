@@ -31,5 +31,9 @@
     "typescript": "^6.0.3",
     "vite": "8.3.2"
   },
-  "type": "module"
+  "type": "module",
+  "imports": {
+    "#lib": "./src/lib/index.js",
+    "#lib/*": "./src/lib/*"
+  }
 }
