@@ -9,8 +9,8 @@
     "format": "prettier --ignore-path .gitignore --write src/"
   },
   "devDependencies": {
-    "@sveltejs/adapter-static": "4.0.0",
-    "@sveltejs/kit": "3.1.0",
+    "@sveltejs/adapter-static": "4.0.1",
+    "@sveltejs/kit": "3.1.1",
     "@sveltejs/vite-plugin-svelte": "^7.3.1",
     "@svgdotjs/svg.js": "3.2.8",
     "clipboard": "2.0.11",
